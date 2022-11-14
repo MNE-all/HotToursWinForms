@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotToursWinForm", "HotToursWinForm\HotToursWinForm.csproj", "{872BA9ED-C617-4B24-B1F1-9F976E2F8363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL_HotTours", "BL_HotTours\BL_HotTours.csproj", "{FC8B5BF4-1D25-4D6C-8FB7-4AE7DF9DB98F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{872BA9ED-C617-4B24-B1F1-9F976E2F8363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{872BA9ED-C617-4B24-B1F1-9F976E2F8363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{872BA9ED-C617-4B24-B1F1-9F976E2F8363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{872BA9ED-C617-4B24-B1F1-9F976E2F8363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8B5BF4-1D25-4D6C-8FB7-4AE7DF9DB98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8B5BF4-1D25-4D6C-8FB7-4AE7DF9DB98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8B5BF4-1D25-4D6C-8FB7-4AE7DF9DB98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8B5BF4-1D25-4D6C-8FB7-4AE7DF9DB98F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1A66FC3-A1AE-438F-8CBF-8DC15132F343}
+	EndGlobalSection
+EndGlobal
