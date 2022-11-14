@@ -1,60 +1,110 @@
-﻿using Hot_Tours_BL.Models;
+﻿using BL_HotTours;
+using Hot_Tours_BL.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
+using Microsoft.Extensions.Options;
 
 namespace Hot_Tours_BL
 {
     public class BusinessLogic
     {
-        private List<Tour> tours = new List<Tour>();
-        public List<Tour> Tours
+        public static List<Tour> Read()
         {
-            get { return tours; }
+            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            {
+                var tours = db.Tours.ToList();
+                return tours;
+            }
+            
         }
-
-        public void AddTour(Tour tour)
+        public static void AddTour(Tour tour)
         {
             tour.Guid = Guid.NewGuid();
-            tours.Add(tour);
+            using(ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            {
+                db.Tours.Add(tour);
+                db.SaveChanges();
+            }
         }
 
-        public void EditTour(Tour tour, int index)
+        public static void EditTour(Tour tour, Guid index)
         {
-            tours[index] = tour;
+            using(ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            {
+                if(db.Tours.FirstOrDefault(x => x.Guid == index) != null)
+                {
+                    db.Tours.FirstOrDefault(x => x.Guid == index).WiFi = tour.WiFi;
+                    db.Tours.FirstOrDefault(x => x.Guid == index).PriceForMan = tour.PriceForMan; 
+                    db.Tours.FirstOrDefault(x => x.Guid == index).TotalPrice = tour.TotalPrice;
+                    db.Tours.FirstOrDefault(x => x.Guid == index).Direction = tour.Direction;
+                    db.Tours.FirstOrDefault(x => x.Guid == index).AmountOfDays = tour.AmountOfDays;
+                    db.Tours.FirstOrDefault(x => x.Guid == index).AmountOfMan = tour.AmountOfMan;
+                    db.Tours.FirstOrDefault(x => x.Guid == index).Date = tour.Date;
+                    db.Tours.FirstOrDefault(x => x.Guid == index).Surcharge = tour.Surcharge;
+
+                    db.SaveChanges();
+                }
+            }
         }
 
-        public void DeleteTour(Tour tour)
+        public static void DeleteTour(Tour tour)
         {
-            tours.Remove(tour);
+            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            {
+                db.Tours.Remove(tour);
+                db.SaveChanges();
+            }
         }
 
-        public string ToursAmount()
+        public static string ToursAmount()
         {
-            return ("Всего туров: " + tours.Count().ToString());
+            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            {
+                return ("Всего туров: " + db.Tours.Count().ToString());
+            }
         }
 
-        public string TotalSum()
+        public static string TotalSum()
         {
             decimal sum = 0;
-            foreach (Tour tour in tours)
+
+            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
             {
-                sum += tour.TotalPrice;
+                foreach (Tour tour in db.Tours)
+                {
+                    sum += tour.TotalPrice;
+                }
+                return ("Общая сумма: " + sum.ToString());
             }
-            return ("Общая сумма: " + sum.ToString());
+
+            
+            
         }
 
-        public string SurchargeAmount()
+        public static string SurchargeAmount()
         {
-            return ("Туров с доплатами: " +
-                tours.Where(x => x.Surcharge > 0).Count().ToString());
+
+            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            {
+                return ("Туров с доплатами: " +
+                db.Tours.Where(x => x.Surcharge > 0).Count().ToString());
+            }
+            
         }
 
-        public string SurchargeSum()
+        public static string SurchargeSum()
         {
             decimal sum = 0;
-            foreach (Tour tour in tours)
+
+            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
             {
-                sum += tour.Surcharge;
+                foreach (Tour tour in db.Tours)
+                {
+                    sum += tour.Surcharge;
+                }
+                return ("Сумма доплат: " + sum.ToString());
             }
-            return ("Сумма доплат: " + sum.ToString());
+           
         }
 
 
