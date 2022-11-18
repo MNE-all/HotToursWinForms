@@ -1,4 +1,4 @@
-﻿using Hot_Tours_BL.Models;
+﻿using Hot_tours.Models;
 
 namespace Hot_tours
 {

@@ -1,6 +1,8 @@
 
-using Hot_Tours_BL;
-using Hot_Tours_BL.Models;
+using System.Windows.Forms;
+using Hot_tours.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Hot_tours
 {
@@ -11,6 +13,8 @@ namespace Hot_tours
         {
             //List<Tour> tours = BusinessLogic.Read();
             InitializeComponent();
+
+
 
             toursDataGridView.AutoGenerateColumns = false;
             bindingSource = new BindingSource();
