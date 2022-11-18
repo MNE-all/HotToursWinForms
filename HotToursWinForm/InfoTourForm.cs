@@ -1,6 +1,6 @@
-﻿using Hot_tours.Models;
+﻿using HotTours.Models;
 
-namespace Hot_tours
+namespace HotTours
 {
     public partial class InfoTourForm : Form
     {

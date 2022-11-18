@@ -1,7 +1,7 @@
-﻿using Hot_tours.Models;
+﻿using HotTours.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hot_tours
+namespace HotTours
 {
     public class ApplicationContext : DbContext
     {

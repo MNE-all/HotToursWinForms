@@ -1,10 +1,10 @@
 
 using System.Windows.Forms;
-using Hot_tours.Models;
+using HotTours.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace Hot_tours
+namespace HotTours
 {
     public partial class MainForm : Form
     {

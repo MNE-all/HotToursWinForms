@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-namespace Hot_tours
+namespace HotTours
 {
     public class DataBaseHelper
     {

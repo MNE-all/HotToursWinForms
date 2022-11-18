@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hot_Tours", "HotToursWinForm\Hot_Tours.csproj", "{872BA9ED-C617-4B24-B1F1-9F976E2F8363}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotTours", "HotToursWinForm\HotTours.csproj", "{872BA9ED-C617-4B24-B1F1-9F976E2F8363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

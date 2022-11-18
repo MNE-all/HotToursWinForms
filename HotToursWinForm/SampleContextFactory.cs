@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 
-namespace Hot_tours
+namespace HotTours
 {
     public class SampleContextFactory : IDesignTimeDbContextFactory<ApplicationContext>
     {
