@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel;
 
-namespace Hot_Tours_BL.Models
+namespace HotTours.Models
 {
     public enum Direction
     {

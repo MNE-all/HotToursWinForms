@@ -1,4 +1,4 @@
-﻿namespace Hot_tours
+﻿namespace HotTours
 {
     partial class MainForm
     {

@@ -1,6 +1,6 @@
-﻿using Hot_Tours_BL.Models;
+﻿using HotTours.Models;
 
-namespace Hot_tours
+namespace HotTours
 {
     public partial class InfoTourForm : Form
     {
@@ -135,7 +135,6 @@ namespace Hot_tours
 
         private void amountOfDaysNumericUpDown_KeyUp(object sender, KeyEventArgs e)
         {
-
             tour.AmountOfDays = (uint)amountOfDaysNumericUpDown.Value;
             Validate();
             TotalCalculate();
@@ -156,6 +155,33 @@ namespace Hot_tours
         }
 
         private void surchargeNumericUpDown_KeyUp(object sender, KeyEventArgs e)
+        {
+            tour.Surcharge = surchargeNumericUpDown.Value;
+            TotalCalculate();
+        }
+
+        private void amountOfDaysNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            tour.AmountOfDays = (uint)amountOfDaysNumericUpDown.Value;
+            Validate();
+            TotalCalculate();
+        }
+
+        private void priceForManNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            tour.PriceForMan = priceForManNumericUpDown.Value;
+            Validate();
+            TotalCalculate();
+        }
+
+        private void amountOfManNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            tour.AmountOfMan = (uint)amountOfManNumericUpDown.Value;
+            Validate();
+            TotalCalculate();
+        }
+
+        private void surchargeNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             tour.Surcharge = surchargeNumericUpDown.Value;
             TotalCalculate();

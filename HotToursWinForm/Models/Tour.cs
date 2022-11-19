@@ -1,4 +1,4 @@
-﻿namespace Hot_Tours_BL.Models
+﻿namespace HotTours.Models
 {
     public class Tour
     {

@@ -1,4 +1,4 @@
-﻿namespace Hot_tours
+﻿namespace HotTours
 {
     partial class InfoTourForm
     {
@@ -102,6 +102,7 @@
             this.surchargeNumericUpDown.Size = new System.Drawing.Size(153, 23);
             this.surchargeNumericUpDown.TabIndex = 46;
             this.surchargeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.surchargeNumericUpDown.ValueChanged += new System.EventHandler(this.surchargeNumericUpDown_ValueChanged);
             this.surchargeNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.surchargeNumericUpDown_KeyUp);
             // 
             // surchargeLabel
@@ -156,6 +157,7 @@
             this.amountOfManNumericUpDown.Size = new System.Drawing.Size(153, 23);
             this.amountOfManNumericUpDown.TabIndex = 41;
             this.amountOfManNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.amountOfManNumericUpDown.ValueChanged += new System.EventHandler(this.amountOfManNumericUpDown_ValueChanged);
             this.amountOfManNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.amountOfManNumericUpDown_KeyUp);
             // 
             // priceForManNumericUpDown
@@ -186,6 +188,7 @@
             0,
             0,
             0});
+            this.priceForManNumericUpDown.ValueChanged += new System.EventHandler(this.priceForManNumericUpDown_ValueChanged);
             this.priceForManNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.priceForManNumericUpDown_KeyUp);
             // 
             // priceForManLabel
@@ -205,6 +208,7 @@
             this.amountOfDaysNumericUpDown.Size = new System.Drawing.Size(152, 23);
             this.amountOfDaysNumericUpDown.TabIndex = 38;
             this.amountOfDaysNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.amountOfDaysNumericUpDown.ValueChanged += new System.EventHandler(this.amountOfDaysNumericUpDown_ValueChanged);
             this.amountOfDaysNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.amountOfDaysNumericUpDown_KeyUp);
             // 
             // amountOfDaysLabel

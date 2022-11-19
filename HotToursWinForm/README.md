@@ -1,1 +1,3 @@
-# Hot_tours
+# Hot Tours
+Entity Framework Core
+by Монашов Николай
