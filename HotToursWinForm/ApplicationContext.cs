@@ -6,14 +6,20 @@ namespace HotTours
     public class ApplicationContext : DbContext
     {
         public DbSet<Tour> Tours { get; set; }
-        public ApplicationContext(DbContextOptions<ApplicationContext> options)
-            : base(options)
+        public DbSet<User> Users { get; set; }
+        public ApplicationContext()
         {
             Database.EnsureCreated();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Tour>().HasKey(x => x.Guid);
+            modelBuilder.Entity<User>().HasKey(x => x.Id);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=HotToursBase;Trusted_Connection=True;");
         }
     }
 }

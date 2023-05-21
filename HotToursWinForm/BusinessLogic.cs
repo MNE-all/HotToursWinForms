@@ -5,9 +5,37 @@ namespace HotTours
 {
     public class BusinessLogic
     {
+        public static List<User> GetUsers()
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var tours = db.Users.ToList();
+                if (tours == null || tours.Count == 0)
+                {
+                    var user = new User
+                    {
+                        Login = "user",
+                        Password = "user",
+                        IsAdmin = false,
+                    };
+                    var admin = new User
+                    {
+                        Login = "admin",
+                        Password = "admin",
+                        IsAdmin = true,
+                    };
+                    db.Users.Add(admin);
+                    db.Users.Add(user);
+                    db.SaveChanges();
+                    tours = db.Users.ToList();
+                }
+                return tours;
+            }
+        }
+
         public static List<Tour> Read()
         {
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            using (ApplicationContext db = new ApplicationContext())
             {
                 var tours = db.Tours.ToList();
                 return tours;
@@ -16,16 +44,17 @@ namespace HotTours
         public static void AddTour(Tour tour)
         {
             tour.Guid = Guid.NewGuid();
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            using (ApplicationContext db = new ApplicationContext())
             {
                 db.Tours.Add(tour);
                 db.SaveChanges();
             }
         }
 
+
         public static void EditTour(Tour tour, Guid index)
         {
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            using (ApplicationContext db = new ApplicationContext())
             {
                 if (db.Tours.FirstOrDefault(x => x.Guid == index) != null)
                 {
@@ -45,60 +74,11 @@ namespace HotTours
 
         public static void DeleteTour(Tour tour)
         {
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
+            using (ApplicationContext db = new ApplicationContext())
             {
                 db.Tours.Remove(tour);
                 db.SaveChanges();
             }
         }
-
-        public static string ToursAmount()
-        {
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
-            {
-                return ("Всего туров: " + db.Tours.Count().ToString());
-            }
-        }
-
-        public static string TotalSum()
-        {
-            decimal sum = 0;
-
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
-            {
-                foreach (Tour tour in db.Tours)
-                {
-                    sum += tour.TotalPrice;
-                }
-                return ("Общая сумма: " + sum.ToString());
-            }
-        }
-
-        public static string SurchargeAmount()
-        {
-
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
-            {
-                return ("Туров с доплатами: " +
-                db.Tours.Where(x => x.Surcharge > 0).Count().ToString());
-            }
-        }
-
-        public static string SurchargeSum()
-        {
-            decimal sum = 0;
-
-            using (ApplicationContext db = new ApplicationContext(DataBaseHelper.Options()))
-            {
-                foreach (Tour tour in db.Tours)
-                {
-                    sum += tour.Surcharge;
-                }
-                return ("Сумма доплат: " + sum.ToString());
-            }
-        }
-
-
-
     }
 }

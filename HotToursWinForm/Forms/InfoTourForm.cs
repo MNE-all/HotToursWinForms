@@ -15,7 +15,7 @@ namespace HotTours
             {
                 Date = DateTime.Now,
                 PriceForMan = 500,
-                Direction = Direction.Crimea
+                Direction = Tour.Directions.First()
             };
             directionComboBox.SelectedItem = tour.Direction;
 
@@ -47,7 +47,7 @@ namespace HotTours
         }
         private void FillDirection()
         {
-            foreach (Direction item in Enum.GetValues(typeof(Direction)))
+            foreach (var item in Tour.Directions)
             {
                 directionComboBox.Items.Add(item);
             }
@@ -96,7 +96,7 @@ namespace HotTours
         {
             if (directionComboBox.SelectedIndex >= 0)
             {
-                tour.Direction = (Direction)directionComboBox.SelectedItem;
+                tour.Direction = directionComboBox.SelectedItem.ToString()!;
             }
         }
 

@@ -2,8 +2,17 @@
 {
     public class Tour
     {
+
+        static public string[] Directions =
+        {
+            "Египет",
+            "Крым",
+            "ОАЭ",
+            "Тунис",
+            "Турция",
+        };
         public Guid Guid { get; set; }
-        public Direction Direction { get; set; }
+        public string Direction { get; set; }
         public DateTime Date { get; set; }
         public uint AmountOfDays { get; set; }
         public decimal PriceForMan { get; set; }

@@ -6,19 +6,15 @@ namespace HotTours.Models
     public enum Direction
     {
         /// <summary>
-        /// Крым
-        /// </summary>
-        [Description("Крым")]
-        Crimea,
-        /// <summary>
         /// Египет
         /// </summary>
         [Description("Египет")]
         Egypt,
         /// <summary>
-        /// Турция
+        /// Крым
         /// </summary>
-        Turkey,
+        [Description("Крым")]
+        Crimea,
         /// <summary>
         /// ОАЭ
         /// </summary>
@@ -26,6 +22,10 @@ namespace HotTours.Models
         /// <summary>
         /// Тунис
         /// </summary>
-        Tunisia
+        Tunisia,
+        /// <summary>
+        /// Турция
+        /// </summary>
+        Turkey
     }
 }
