@@ -559,6 +559,7 @@
             comboBoxSort.Name = "comboBoxSort";
             comboBoxSort.Size = new Size(213, 23);
             comboBoxSort.TabIndex = 0;
+            comboBoxSort.SelectedIndexChanged += MakeSortAndFilter;
             comboBoxSort.Click += MakeSortAndFilter;
             // 
             // fileToolStripMenuItem
