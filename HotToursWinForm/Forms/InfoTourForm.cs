@@ -28,8 +28,6 @@ namespace HotTours
             InitializeComponent();
             FillDirection();
 
-            dateTimePicker1.MinDate = DateTime.Now;
-
             tour = new Tour()
             {
                 Date = t.Date,
@@ -41,6 +39,7 @@ namespace HotTours
                 Surcharge = t.Surcharge,
                 WiFi = t.WiFi
             };
+            dateTimePicker1.MinDate = DateTime.Now;
             directionComboBox.SelectedItem = tour.Direction;
             priceForManNumericUpDown.Value = tour.PriceForMan;
             amountOfManNumericUpDown.Value = tour.AmountOfMan;
