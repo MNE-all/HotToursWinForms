@@ -241,8 +241,6 @@ namespace HotTours
         // Фильтрация текстовых полей
         private void TextBoxFromToFilter(TextBox textFrom, TextBox textTo)
         {
-
-
             if (textFrom == textBoxSurchageFrom)
             {
                 decimal.TryParse(textFrom.Text, out var value);
