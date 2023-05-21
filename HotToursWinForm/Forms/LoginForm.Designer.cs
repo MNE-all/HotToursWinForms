@@ -99,6 +99,7 @@
             Controls.Add(buttonEnter);
             Controls.Add(label1);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Горячие туры | Авторизация";
             FormClosed += LoginForm_FormClosed;
             ResumeLayout(false);

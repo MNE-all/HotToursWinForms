@@ -11,6 +11,8 @@ namespace HotTours
             InitializeComponent();
             FillDirection();
 
+            dateTimePicker1.MinDate = DateTime.Now;
+
             tour = new Tour
             {
                 Date = DateTime.Now,
@@ -25,6 +27,9 @@ namespace HotTours
         {
             InitializeComponent();
             FillDirection();
+
+            dateTimePicker1.MinDate = DateTime.Now;
+
             tour = new Tour()
             {
                 Date = t.Date,

@@ -6,22 +6,23 @@ using System.Globalization;
 
 namespace HotTours
 {
-    //TODO Странный баг с отображением общей суммы (TotalPrice)
     public partial class MainForm : Form
     {
         private readonly BindingSource bindingSource;
 
         List<Tour> tours = BusinessLogic.Read();
-        public MainForm(bool isAdmin)
+        bool isAdmin = true;
+        public MainForm(bool _isAdmin)
         {
             InitializeComponent();
             bindingSource = new BindingSource();
-            bindingSource.DataSource = BusinessLogic.Read();
 
-            if (!isAdmin)
+            if (!_isAdmin)
             {
                 правкаToolStripMenuItem.Visible = false;
                 statusStrip1.Visible = false;
+                isAdmin = false;
+                accountsToolStripMenuItem.Visible = false;
             }
 
             foreach (DataGridViewColumn column in toursDataGridView.Columns)
@@ -48,6 +49,11 @@ namespace HotTours
         private void MakeSortAndFilter()
         {
             tours = BusinessLogic.Read();
+
+            if (tours.Count == 0)
+            {
+                tours = BusinessLogic.GenerateTours();
+            }
 
             // Sort
             SortTours(ref tours);
@@ -152,8 +158,53 @@ namespace HotTours
                 radioButtonWiFiFalse.Enabled = false;
             }
 
+            if (tours.Count == 0)
+            {
+                labelNullError.Visible = true;
+                buttonExport.Enabled = false;
+            }
+            else
+            {
+                labelNullError.Visible = false;
+                buttonExport.Enabled = true;
+            }
+
             bindingSource.DataSource = tours;
             CalculateStats();
+        }
+        private void AboutClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Задание выполнил: Монашов Николай Егорович ИП-20-3", "Туристическое агентство",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ExportClick(object sender, EventArgs e)
+        {
+            var ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
+            //Книга.^
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            //Таблица.
+            ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            ExcelWorkSheet.Columns.ColumnWidth = 24;
+            ExcelApp.Cells[1, 1] = "Направление";
+            ExcelApp.Cells[1, 2] = "Дата вылета";
+            ExcelApp.Cells[1, 3] = "Количество ночей";
+            ExcelApp.Cells[1, 4] = "Стоимость за отдыхающего (руб.)";
+            ExcelApp.Cells[1, 5] = "Количество отдыхающих";
+            ExcelApp.Cells[1, 6] = "Наличие Wi-Fi";
+            ExcelApp.Cells[1, 7] = "Доплаты (руб.)";
+            ExcelApp.Cells[1, 8] = "Общая стоимость";
+            for (int i = 0; i < toursDataGridView.Rows.Count; i++)
+            {
+                for (int j = 0; j < toursDataGridView.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 2, j + 1] = toursDataGridView.Rows[i].Cells[j].Value;
+                }
+            }
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
 
         private void SortTours(ref List<Tour> tours)
@@ -346,30 +397,6 @@ namespace HotTours
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            //if (toursDataGridView.Columns[e.ColumnIndex].Name == "DirectionColumn" &&
-            //    e.Value != null)
-            //{
-            //    Direction val = (Direction)e.Value;
-            //    switch (val)
-            //    {
-            //        case Direction.Tunisia:
-            //            e.Value = "Тунис";
-            //            break;
-            //        case Direction.UAE:
-            //            e.Value = "ОАЭ";
-            //            break;
-            //        case Direction.Crimea:
-            //            e.Value = "Крым";
-            //            break;
-            //        case Direction.Turkey:
-            //            e.Value = "Турция";
-            //            break;
-            //        case Direction.Egypt:
-            //            e.Value = "Египет";
-            //            break;
-            //    }
-            //}
-            //else
             if (toursDataGridView.Columns[e.ColumnIndex].Name == "DateColumn" &&
                 e.RowIndex < tours.Count)
             {
@@ -387,10 +414,10 @@ namespace HotTours
 
         private void CalculateStats()
         {
-            totalToolStripStatusLabel.Text = tours.Count.ToString();
-            totalSumToolStripStatusLabel.Text = tours.Sum(x => x.TotalPrice).ToString();
-            surchargeCountToolStripStatusLabel.Text = tours.Where(x => x.Surcharge > 0).ToList().Count.ToString();
-            surchargeSumToolStripStatusLabel.Text = tours.Sum(x => x.Surcharge).ToString();
+            totalToolStripStatusLabel.Text = "Всего туров: " + tours.Count.ToString();
+            totalSumToolStripStatusLabel.Text = "Общая сумма: " + tours.Sum(x => x.TotalPrice).ToString();
+            surchargeCountToolStripStatusLabel.Text = "Туров с доплатами: " + tours.Where(x => x.Surcharge > 0).ToList().Count.ToString();
+            surchargeSumToolStripStatusLabel.Text = "Сумма доплат: " + tours.Sum(x => x.Surcharge).ToString();
 
             bindingSource.ResetBindings(false);
         }
@@ -423,6 +450,34 @@ namespace HotTours
             Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void buttonList_Click(object sender, EventArgs e)
+        {
+            ToursListForm toursListForm = new ToursListForm(isAdmin);
+            toursListForm.ShowDialog();
+            MakeSortAndFilter();
+        }
+
+        private void accountsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AccountsListForm accountsListForm = new AccountsListForm();
+            accountsListForm.ShowDialog();
+        }
+
+        private void toursDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var x = toursDataGridView.SelectedRows[0];
+            if (x != null)
+            {
+                Tour data = toursDataGridView.Rows[x.Index].DataBoundItem as Tour;
+                if (data != null && data.Date < DateTime.Now)
+                {
+                    editToolStripMenuItem.Enabled = false;
+                }
+            }
+
+
         }
     }
 }

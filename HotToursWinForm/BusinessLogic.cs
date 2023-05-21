@@ -9,8 +9,8 @@ namespace HotTours
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                var tours = db.Users.ToList();
-                if (tours == null || tours.Count == 0)
+                var users = db.Users.ToList();
+                if (users == null || users.Count == 0)
                 {
                     var user = new User
                     {
@@ -27,9 +27,9 @@ namespace HotTours
                     db.Users.Add(admin);
                     db.Users.Add(user);
                     db.SaveChanges();
-                    tours = db.Users.ToList();
+                    users = db.Users.ToList();
                 }
-                return tours;
+                return users;
             }
         }
 
@@ -78,6 +78,41 @@ namespace HotTours
             {
                 db.Tours.Remove(tour);
                 db.SaveChanges();
+            }
+        }
+
+        public static List<Tour> GenerateTours()
+        {
+            Random rnd = new Random();
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var tours = db.Tours.ToList();
+                if (tours == null || tours.Count == 0)
+                {
+                    for (var i = 0; i < 100; i++)
+                    {
+                        var priceForMan = rnd.Next(500, 3000);
+                        var amountOfDays = (uint)rnd.Next(1, 18);
+                        var amountOfMan = (uint)rnd.Next(1, 8);
+                        var surcharge = rnd.NextDouble() >= 0.5 ? rnd.Next(500, 15000) : 0;
+                        var tour = new Tour
+                        {
+                            Guid = Guid.NewGuid(),
+                            WiFi = rnd.NextDouble() >= 0.5,
+                            PriceForMan = priceForMan,
+                            Direction = Tour.Directions[rnd.Next(Tour.Directions.Length)],
+                            AmountOfDays = amountOfDays,
+                            AmountOfMan = amountOfMan,
+                            Date = DateTime.Now.AddDays(rnd.Next(1000)),
+                            Surcharge = surcharge,
+                            TotalPrice = surcharge + amountOfMan * amountOfDays * priceForMan,
+                        };
+                        db.Tours.Add(tour);
+                    }
+                    db.SaveChanges();
+                    tours = db.Tours.ToList();
+                }
+                return tours;
             }
         }
     }

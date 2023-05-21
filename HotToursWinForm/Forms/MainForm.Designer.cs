@@ -29,34 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            menuStrip1 = new MenuStrip();
-            fileToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
-            правкаToolStripMenuItem = new ToolStripMenuItem();
-            addToolStripMenuItem = new ToolStripMenuItem();
-            editToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator1 = new ToolStripSeparator();
-            deleteToolStripMenuItem = new ToolStripMenuItem();
-            changeAccountToolStripMenuItem = new ToolStripMenuItem();
-            statusStrip1 = new StatusStrip();
-            totalToolStripStatusLabel = new ToolStripStatusLabel();
-            totalSumToolStripStatusLabel = new ToolStripStatusLabel();
-            surchargeCountToolStripStatusLabel = new ToolStripStatusLabel();
-            surchargeSumToolStripStatusLabel = new ToolStripStatusLabel();
-            toursDataGridView = new DataGridView();
-            DirectionColumn = new DataGridViewTextBoxColumn();
-            DateColumn = new DataGridViewTextBoxColumn();
-            AmountOfDaysColumn = new DataGridViewTextBoxColumn();
-            PriceForManColumn = new DataGridViewTextBoxColumn();
-            AmountOfManColumn = new DataGridViewTextBoxColumn();
-            WiFiColumn = new DataGridViewCheckBoxColumn();
-            SurchargeColumn = new DataGridViewTextBoxColumn();
-            TotalColumn = new DataGridViewTextBoxColumn();
-            groupBoxSort = new GroupBox();
-            radioButtonSortDown = new RadioButton();
-            radioButtonSortUp = new RadioButton();
-            comboBoxSort = new ComboBox();
+            tourBindingSource = new BindingSource(components);
+            panel1 = new Panel();
             groupBox1 = new GroupBox();
+            panel3 = new Panel();
+            buttonList = new Button();
+            labelNullError = new Label();
+            buttonExport = new Button();
             radioButtonWiFiFalse = new RadioButton();
             radioButtonWiFiTrue = new RadioButton();
             label11 = new Label();
@@ -87,256 +66,66 @@
             checkBoxAmountOfDays = new CheckBox();
             comboBoxDirectionFilter = new ComboBox();
             checkBoxDirection = new CheckBox();
-            tourBindingSource = new BindingSource(components);
+            groupBoxSort = new GroupBox();
+            radioButtonSortDown = new RadioButton();
+            radioButtonSortUp = new RadioButton();
+            comboBoxSort = new ComboBox();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            правкаToolStripMenuItem = new ToolStripMenuItem();
+            addToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
+            changeAccountToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
+            accountsToolStripMenuItem = new ToolStripMenuItem();
+            totalToolStripStatusLabel = new ToolStripStatusLabel();
+            totalSumToolStripStatusLabel = new ToolStripStatusLabel();
+            surchargeCountToolStripStatusLabel = new ToolStripStatusLabel();
+            surchargeSumToolStripStatusLabel = new ToolStripStatusLabel();
+            statusStrip1 = new StatusStrip();
+            panel2 = new Panel();
+            toursDataGridView = new DataGridView();
+            DirectionColumn = new DataGridViewTextBoxColumn();
+            DateColumn = new DataGridViewTextBoxColumn();
+            AmountOfDaysColumn = new DataGridViewTextBoxColumn();
+            PriceForManColumn = new DataGridViewTextBoxColumn();
+            AmountOfManColumn = new DataGridViewTextBoxColumn();
+            WiFiColumn = new DataGridViewCheckBoxColumn();
+            SurchargeColumn = new DataGridViewTextBoxColumn();
+            TotalColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)tourBindingSource).BeginInit();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            panel3.SuspendLayout();
+            groupBoxSort.SuspendLayout();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)toursDataGridView).BeginInit();
-            groupBoxSort.SuspendLayout();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tourBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // menuStrip1
+            // tourBindingSource
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, правкаToolStripMenuItem, changeAccountToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(1393, 24);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            tourBindingSource.DataSource = typeof(Models.Tour);
             // 
-            // fileToolStripMenuItem
+            // panel1
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
-            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(48, 20);
-            fileToolStripMenuItem.Text = "Файл";
-            // 
-            // exitToolStripMenuItem
-            // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(109, 22);
-            exitToolStripMenuItem.Text = "Выход";
-            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
-            // 
-            // правкаToolStripMenuItem
-            // 
-            правкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addToolStripMenuItem, editToolStripMenuItem, toolStripSeparator1, deleteToolStripMenuItem });
-            правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            правкаToolStripMenuItem.Size = new Size(59, 20);
-            правкаToolStripMenuItem.Text = "Правка";
-            // 
-            // addToolStripMenuItem
-            // 
-            addToolStripMenuItem.Name = "addToolStripMenuItem";
-            addToolStripMenuItem.Size = new Size(128, 22);
-            addToolStripMenuItem.Text = "Добавить";
-            addToolStripMenuItem.Click += addToolStripMenuItem_Click;
-            // 
-            // editToolStripMenuItem
-            // 
-            editToolStripMenuItem.Enabled = false;
-            editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(128, 22);
-            editToolStripMenuItem.Text = "Изменить";
-            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(125, 6);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            deleteToolStripMenuItem.Enabled = false;
-            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(128, 22);
-            deleteToolStripMenuItem.Text = "Удалить";
-            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
-            // 
-            // changeAccountToolStripMenuItem
-            // 
-            changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
-            changeAccountToolStripMenuItem.Size = new Size(112, 20);
-            changeAccountToolStripMenuItem.Text = "Сменить аккаунт";
-            changeAccountToolStripMenuItem.Click += changeAccountToolStripMenuItem_Click;
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { totalToolStripStatusLabel, totalSumToolStripStatusLabel, surchargeCountToolStripStatusLabel, surchargeSumToolStripStatusLabel });
-            statusStrip1.Location = new Point(0, 617);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Padding = new Padding(1, 0, 12, 0);
-            statusStrip1.Size = new Size(1393, 22);
-            statusStrip1.TabIndex = 1;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // totalToolStripStatusLabel
-            // 
-            totalToolStripStatusLabel.Name = "totalToolStripStatusLabel";
-            totalToolStripStatusLabel.Size = new Size(78, 17);
-            totalToolStripStatusLabel.Text = "Всего туров: ";
-            // 
-            // totalSumToolStripStatusLabel
-            // 
-            totalSumToolStripStatusLabel.Name = "totalSumToolStripStatusLabel";
-            totalSumToolStripStatusLabel.Size = new Size(91, 17);
-            totalSumToolStripStatusLabel.Text = "Общая сумма: ";
-            // 
-            // surchargeCountToolStripStatusLabel
-            // 
-            surchargeCountToolStripStatusLabel.Name = "surchargeCountToolStripStatusLabel";
-            surchargeCountToolStripStatusLabel.Size = new Size(114, 17);
-            surchargeCountToolStripStatusLabel.Text = "Туров с доплатами:";
-            // 
-            // surchargeSumToolStripStatusLabel
-            // 
-            surchargeSumToolStripStatusLabel.Name = "surchargeSumToolStripStatusLabel";
-            surchargeSumToolStripStatusLabel.Size = new Size(92, 17);
-            surchargeSumToolStripStatusLabel.Text = "Сумма доплат: ";
-            // 
-            // toursDataGridView
-            // 
-            toursDataGridView.AllowUserToAddRows = false;
-            toursDataGridView.AllowUserToDeleteRows = false;
-            toursDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            toursDataGridView.Columns.AddRange(new DataGridViewColumn[] { DirectionColumn, DateColumn, AmountOfDaysColumn, PriceForManColumn, AmountOfManColumn, WiFiColumn, SurchargeColumn, TotalColumn });
-            toursDataGridView.Dock = DockStyle.Left;
-            toursDataGridView.Location = new Point(0, 24);
-            toursDataGridView.Margin = new Padding(3, 2, 3, 2);
-            toursDataGridView.Name = "toursDataGridView";
-            toursDataGridView.RowHeadersVisible = false;
-            toursDataGridView.RowHeadersWidth = 51;
-            toursDataGridView.RowTemplate.Height = 29;
-            toursDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            toursDataGridView.Size = new Size(920, 593);
-            toursDataGridView.TabIndex = 2;
-            toursDataGridView.CellFormatting += dataGridView1_CellFormatting;
-            toursDataGridView.SelectionChanged += dataGridView1_SelectionChanged;
-            // 
-            // DirectionColumn
-            // 
-            DirectionColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DirectionColumn.DataPropertyName = "Direction";
-            DirectionColumn.HeaderText = "Направление";
-            DirectionColumn.MinimumWidth = 6;
-            DirectionColumn.Name = "DirectionColumn";
-            DirectionColumn.ReadOnly = true;
-            // 
-            // DateColumn
-            // 
-            DateColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DateColumn.DataPropertyName = "Date";
-            DateColumn.HeaderText = "Дата вылета";
-            DateColumn.MinimumWidth = 6;
-            DateColumn.Name = "DateColumn";
-            DateColumn.ReadOnly = true;
-            // 
-            // AmountOfDaysColumn
-            // 
-            AmountOfDaysColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            AmountOfDaysColumn.DataPropertyName = "AmountOfDays";
-            AmountOfDaysColumn.HeaderText = "Количество ночей";
-            AmountOfDaysColumn.MinimumWidth = 6;
-            AmountOfDaysColumn.Name = "AmountOfDaysColumn";
-            AmountOfDaysColumn.ReadOnly = true;
-            // 
-            // PriceForManColumn
-            // 
-            PriceForManColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            PriceForManColumn.DataPropertyName = "PriceForMan";
-            PriceForManColumn.HeaderText = "Стоимость за отдыхающего (руб)";
-            PriceForManColumn.MinimumWidth = 6;
-            PriceForManColumn.Name = "PriceForManColumn";
-            PriceForManColumn.ReadOnly = true;
-            // 
-            // AmountOfManColumn
-            // 
-            AmountOfManColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            AmountOfManColumn.DataPropertyName = "AmountOfMan";
-            AmountOfManColumn.HeaderText = "Количество отдыхающих";
-            AmountOfManColumn.MinimumWidth = 6;
-            AmountOfManColumn.Name = "AmountOfManColumn";
-            AmountOfManColumn.ReadOnly = true;
-            // 
-            // WiFiColumn
-            // 
-            WiFiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            WiFiColumn.DataPropertyName = "WiFi";
-            WiFiColumn.HeaderText = "Наличие Wi-Fi";
-            WiFiColumn.MinimumWidth = 6;
-            WiFiColumn.Name = "WiFiColumn";
-            WiFiColumn.ReadOnly = true;
-            // 
-            // SurchargeColumn
-            // 
-            SurchargeColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            SurchargeColumn.DataPropertyName = "Surcharge";
-            SurchargeColumn.HeaderText = "Доплаты (руб)";
-            SurchargeColumn.MinimumWidth = 6;
-            SurchargeColumn.Name = "SurchargeColumn";
-            SurchargeColumn.ReadOnly = true;
-            // 
-            // TotalColumn
-            // 
-            TotalColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TotalColumn.DataPropertyName = "TotalPrice";
-            TotalColumn.HeaderText = "Общая стоимость";
-            TotalColumn.MinimumWidth = 6;
-            TotalColumn.Name = "TotalColumn";
-            TotalColumn.ReadOnly = true;
-            // 
-            // groupBoxSort
-            // 
-            groupBoxSort.Controls.Add(radioButtonSortDown);
-            groupBoxSort.Controls.Add(radioButtonSortUp);
-            groupBoxSort.Controls.Add(comboBoxSort);
-            groupBoxSort.Location = new Point(926, 24);
-            groupBoxSort.Name = "groupBoxSort";
-            groupBoxSort.Size = new Size(455, 60);
-            groupBoxSort.TabIndex = 3;
-            groupBoxSort.TabStop = false;
-            groupBoxSort.Text = "Сортировать по ";
-            // 
-            // radioButtonSortDown
-            // 
-            radioButtonSortDown.AutoSize = true;
-            radioButtonSortDown.Location = new Point(347, 23);
-            radioButtonSortDown.Name = "radioButtonSortDown";
-            radioButtonSortDown.Size = new Size(102, 19);
-            radioButtonSortDown.TabIndex = 2;
-            radioButtonSortDown.Text = "По убыванию";
-            radioButtonSortDown.UseVisualStyleBackColor = true;
-            radioButtonSortDown.Click += MakeSortAndFilter;
-            // 
-            // radioButtonSortUp
-            // 
-            radioButtonSortUp.AutoSize = true;
-            radioButtonSortUp.Checked = true;
-            radioButtonSortUp.Location = new Point(225, 23);
-            radioButtonSortUp.Name = "radioButtonSortUp";
-            radioButtonSortUp.Size = new Size(116, 19);
-            radioButtonSortUp.TabIndex = 1;
-            radioButtonSortUp.TabStop = true;
-            radioButtonSortUp.Text = "По возрастанию";
-            radioButtonSortUp.UseVisualStyleBackColor = true;
-            radioButtonSortUp.Click += MakeSortAndFilter;
-            // 
-            // comboBoxSort
-            // 
-            comboBoxSort.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxSort.FormattingEnabled = true;
-            comboBoxSort.Location = new Point(6, 22);
-            comboBoxSort.Name = "comboBoxSort";
-            comboBoxSort.Size = new Size(213, 23);
-            comboBoxSort.TabIndex = 0;
-            comboBoxSort.SelectedIndexChanged += MakeSortAndFilter;
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(groupBoxSort);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(927, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(457, 595);
+            panel1.TabIndex = 5;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(panel3);
+            groupBox1.Controls.Add(labelNullError);
+            groupBox1.Controls.Add(buttonExport);
             groupBox1.Controls.Add(radioButtonWiFiFalse);
             groupBox1.Controls.Add(radioButtonWiFiTrue);
             groupBox1.Controls.Add(label11);
@@ -367,12 +156,55 @@
             groupBox1.Controls.Add(checkBoxAmountOfDays);
             groupBox1.Controls.Add(comboBoxDirectionFilter);
             groupBox1.Controls.Add(checkBoxDirection);
-            groupBox1.Location = new Point(926, 90);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Location = new Point(0, 60);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(455, 524);
-            groupBox1.TabIndex = 4;
+            groupBox1.Size = new Size(457, 535);
+            groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Фильтры";
+            groupBox1.TextChanged += MakeSortAndFilter;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(buttonList);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(3, 390);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(451, 100);
+            panel3.TabIndex = 113;
+            // 
+            // buttonList
+            // 
+            buttonList.Dock = DockStyle.Top;
+            buttonList.Location = new Point(0, 0);
+            buttonList.Name = "buttonList";
+            buttonList.Size = new Size(451, 46);
+            buttonList.TabIndex = 110;
+            buttonList.Text = "Списком";
+            buttonList.UseVisualStyleBackColor = true;
+            // 
+            // labelNullError
+            // 
+            labelNullError.AutoSize = true;
+            labelNullError.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNullError.ForeColor = Color.OrangeRed;
+            labelNullError.Location = new Point(53, 291);
+            labelNullError.Name = "labelNullError";
+            labelNullError.Size = new Size(359, 25);
+            labelNullError.TabIndex = 112;
+            labelNullError.Text = "По вашему запросу ничего не найдено!";
+            labelNullError.Visible = false;
+            // 
+            // buttonExport
+            // 
+            buttonExport.Dock = DockStyle.Bottom;
+            buttonExport.Location = new Point(3, 490);
+            buttonExport.Name = "buttonExport";
+            buttonExport.Size = new Size(451, 42);
+            buttonExport.TabIndex = 111;
+            buttonExport.Text = "Экспорт";
+            buttonExport.UseVisualStyleBackColor = true;
             // 
             // radioButtonWiFiFalse
             // 
@@ -670,7 +502,6 @@
             comboBoxDirectionFilter.Name = "comboBoxDirectionFilter";
             comboBoxDirectionFilter.Size = new Size(251, 23);
             comboBoxDirectionFilter.TabIndex = 1;
-            comboBoxDirectionFilter.SelectedIndexChanged += MakeSortAndFilter;
             // 
             // checkBoxDirection
             // 
@@ -683,83 +514,309 @@
             checkBoxDirection.UseVisualStyleBackColor = true;
             checkBoxDirection.Click += MakeSortAndFilter;
             // 
-            // tourBindingSource
+            // groupBoxSort
             // 
-            tourBindingSource.DataSource = typeof(Models.Tour);
+            groupBoxSort.Controls.Add(radioButtonSortDown);
+            groupBoxSort.Controls.Add(radioButtonSortUp);
+            groupBoxSort.Controls.Add(comboBoxSort);
+            groupBoxSort.Dock = DockStyle.Top;
+            groupBoxSort.Location = new Point(0, 0);
+            groupBoxSort.Name = "groupBoxSort";
+            groupBoxSort.Size = new Size(457, 60);
+            groupBoxSort.TabIndex = 5;
+            groupBoxSort.TabStop = false;
+            groupBoxSort.Text = "Сортировать по ";
+            // 
+            // radioButtonSortDown
+            // 
+            radioButtonSortDown.AutoSize = true;
+            radioButtonSortDown.Location = new Point(347, 23);
+            radioButtonSortDown.Name = "radioButtonSortDown";
+            radioButtonSortDown.Size = new Size(102, 19);
+            radioButtonSortDown.TabIndex = 2;
+            radioButtonSortDown.Text = "По убыванию";
+            radioButtonSortDown.UseVisualStyleBackColor = true;
+            radioButtonSortDown.Click += MakeSortAndFilter;
+            // 
+            // radioButtonSortUp
+            // 
+            radioButtonSortUp.AutoSize = true;
+            radioButtonSortUp.Checked = true;
+            radioButtonSortUp.Location = new Point(225, 23);
+            radioButtonSortUp.Name = "radioButtonSortUp";
+            radioButtonSortUp.Size = new Size(116, 19);
+            radioButtonSortUp.TabIndex = 1;
+            radioButtonSortUp.TabStop = true;
+            radioButtonSortUp.Text = "По возрастанию";
+            radioButtonSortUp.UseVisualStyleBackColor = true;
+            radioButtonSortUp.Click += MakeSortAndFilter;
+            // 
+            // comboBoxSort
+            // 
+            comboBoxSort.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSort.FormattingEnabled = true;
+            comboBoxSort.Location = new Point(6, 22);
+            comboBoxSort.Name = "comboBoxSort";
+            comboBoxSort.Size = new Size(213, 23);
+            comboBoxSort.TabIndex = 0;
+            comboBoxSort.Click += MakeSortAndFilter;
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(48, 20);
+            fileToolStripMenuItem.Text = "Файл";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(109, 22);
+            exitToolStripMenuItem.Text = "Выход";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
+            // правкаToolStripMenuItem
+            // 
+            правкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addToolStripMenuItem, editToolStripMenuItem, toolStripSeparator1, deleteToolStripMenuItem });
+            правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
+            правкаToolStripMenuItem.Size = new Size(59, 20);
+            правкаToolStripMenuItem.Text = "Правка";
+            // 
+            // addToolStripMenuItem
+            // 
+            addToolStripMenuItem.Name = "addToolStripMenuItem";
+            addToolStripMenuItem.Size = new Size(128, 22);
+            addToolStripMenuItem.Text = "Добавить";
+            addToolStripMenuItem.Click += addToolStripMenuItem_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Enabled = false;
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(128, 22);
+            editToolStripMenuItem.Text = "Изменить";
+            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(125, 6);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.Enabled = false;
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(128, 22);
+            deleteToolStripMenuItem.Text = "Удалить";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
+            // 
+            // changeAccountToolStripMenuItem
+            // 
+            changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
+            changeAccountToolStripMenuItem.Size = new Size(112, 20);
+            changeAccountToolStripMenuItem.Text = "Сменить аккаунт";
+            changeAccountToolStripMenuItem.Click += changeAccountToolStripMenuItem_Click;
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(94, 20);
+            aboutToolStripMenuItem.Text = "О программе";
+            aboutToolStripMenuItem.Click += AboutClick;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, правкаToolStripMenuItem, changeAccountToolStripMenuItem, accountsToolStripMenuItem, aboutToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(1384, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // accountsToolStripMenuItem
+            // 
+            accountsToolStripMenuItem.Name = "accountsToolStripMenuItem";
+            accountsToolStripMenuItem.Size = new Size(72, 20);
+            accountsToolStripMenuItem.Text = "Аккаунты";
+            accountsToolStripMenuItem.Click += accountsToolStripMenuItem_Click;
+            // 
+            // totalToolStripStatusLabel
+            // 
+            totalToolStripStatusLabel.Name = "totalToolStripStatusLabel";
+            totalToolStripStatusLabel.Size = new Size(78, 17);
+            totalToolStripStatusLabel.Text = "Всего туров: ";
+            // 
+            // totalSumToolStripStatusLabel
+            // 
+            totalSumToolStripStatusLabel.Name = "totalSumToolStripStatusLabel";
+            totalSumToolStripStatusLabel.Size = new Size(91, 17);
+            totalSumToolStripStatusLabel.Text = "Общая сумма: ";
+            // 
+            // surchargeCountToolStripStatusLabel
+            // 
+            surchargeCountToolStripStatusLabel.Name = "surchargeCountToolStripStatusLabel";
+            surchargeCountToolStripStatusLabel.Size = new Size(114, 17);
+            surchargeCountToolStripStatusLabel.Text = "Туров с доплатами:";
+            // 
+            // surchargeSumToolStripStatusLabel
+            // 
+            surchargeSumToolStripStatusLabel.Name = "surchargeSumToolStripStatusLabel";
+            surchargeSumToolStripStatusLabel.Size = new Size(92, 17);
+            surchargeSumToolStripStatusLabel.Text = "Сумма доплат: ";
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { totalToolStripStatusLabel, totalSumToolStripStatusLabel, surchargeCountToolStripStatusLabel, surchargeSumToolStripStatusLabel });
+            statusStrip1.Location = new Point(0, 619);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Padding = new Padding(1, 0, 12, 0);
+            statusStrip1.Size = new Size(1384, 22);
+            statusStrip1.TabIndex = 1;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(toursDataGridView);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(927, 595);
+            panel2.TabIndex = 6;
+            // 
+            // toursDataGridView
+            // 
+            toursDataGridView.AllowUserToAddRows = false;
+            toursDataGridView.AllowUserToDeleteRows = false;
+            toursDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            toursDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            toursDataGridView.Columns.AddRange(new DataGridViewColumn[] { DirectionColumn, DateColumn, AmountOfDaysColumn, PriceForManColumn, AmountOfManColumn, WiFiColumn, SurchargeColumn, TotalColumn });
+            toursDataGridView.Dock = DockStyle.Fill;
+            toursDataGridView.Location = new Point(0, 0);
+            toursDataGridView.Margin = new Padding(3, 2, 3, 2);
+            toursDataGridView.Name = "toursDataGridView";
+            toursDataGridView.RowHeadersVisible = false;
+            toursDataGridView.RowHeadersWidth = 51;
+            toursDataGridView.RowTemplate.Height = 29;
+            toursDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            toursDataGridView.Size = new Size(927, 595);
+            toursDataGridView.TabIndex = 3;
+            toursDataGridView.Click += toursDataGridView_SelectionChanged;
+            // 
+            // DirectionColumn
+            // 
+            DirectionColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DirectionColumn.DataPropertyName = "Direction";
+            DirectionColumn.HeaderText = "Направление";
+            DirectionColumn.MinimumWidth = 6;
+            DirectionColumn.Name = "DirectionColumn";
+            DirectionColumn.ReadOnly = true;
+            // 
+            // DateColumn
+            // 
+            DateColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DateColumn.DataPropertyName = "Date";
+            DateColumn.HeaderText = "Дата вылета";
+            DateColumn.MinimumWidth = 6;
+            DateColumn.Name = "DateColumn";
+            DateColumn.ReadOnly = true;
+            // 
+            // AmountOfDaysColumn
+            // 
+            AmountOfDaysColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            AmountOfDaysColumn.DataPropertyName = "AmountOfDays";
+            AmountOfDaysColumn.HeaderText = "Количество ночей";
+            AmountOfDaysColumn.MinimumWidth = 6;
+            AmountOfDaysColumn.Name = "AmountOfDaysColumn";
+            AmountOfDaysColumn.ReadOnly = true;
+            // 
+            // PriceForManColumn
+            // 
+            PriceForManColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PriceForManColumn.DataPropertyName = "PriceForMan";
+            PriceForManColumn.HeaderText = "Стоимость за отдыхающего (руб)";
+            PriceForManColumn.MinimumWidth = 6;
+            PriceForManColumn.Name = "PriceForManColumn";
+            PriceForManColumn.ReadOnly = true;
+            // 
+            // AmountOfManColumn
+            // 
+            AmountOfManColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            AmountOfManColumn.DataPropertyName = "AmountOfMan";
+            AmountOfManColumn.HeaderText = "Количество отдыхающих";
+            AmountOfManColumn.MinimumWidth = 6;
+            AmountOfManColumn.Name = "AmountOfManColumn";
+            AmountOfManColumn.ReadOnly = true;
+            // 
+            // WiFiColumn
+            // 
+            WiFiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            WiFiColumn.DataPropertyName = "WiFi";
+            WiFiColumn.HeaderText = "Наличие Wi-Fi";
+            WiFiColumn.MinimumWidth = 6;
+            WiFiColumn.Name = "WiFiColumn";
+            WiFiColumn.ReadOnly = true;
+            // 
+            // SurchargeColumn
+            // 
+            SurchargeColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SurchargeColumn.DataPropertyName = "Surcharge";
+            SurchargeColumn.HeaderText = "Доплаты (руб)";
+            SurchargeColumn.MinimumWidth = 6;
+            SurchargeColumn.Name = "SurchargeColumn";
+            SurchargeColumn.ReadOnly = true;
+            // 
+            // TotalColumn
+            // 
+            TotalColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TotalColumn.DataPropertyName = "TotalPrice";
+            TotalColumn.HeaderText = "Общая стоимость";
+            TotalColumn.MinimumWidth = 6;
+            TotalColumn.Name = "TotalColumn";
+            TotalColumn.ReadOnly = true;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1393, 639);
-            Controls.Add(groupBox1);
-            Controls.Add(groupBoxSort);
-            Controls.Add(toursDataGridView);
+            ClientSize = new Size(1384, 641);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(1400, 680);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Горячие туры | Главная";
             FormClosed += MainForm_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)tourBindingSource).EndInit();
+            panel1.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            panel3.ResumeLayout(false);
+            groupBoxSort.ResumeLayout(false);
+            groupBoxSort.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)toursDataGridView).EndInit();
-            groupBoxSort.ResumeLayout(false);
-            groupBoxSort.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tourBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem правкаToolStripMenuItem;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel totalToolStripStatusLabel;
-        private DataGridView toursDataGridView;
-        private ToolStripMenuItem exitToolStripMenuItem;
-        private ToolStripMenuItem addToolStripMenuItem;
-        private ToolStripMenuItem editToolStripMenuItem;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem deleteToolStripMenuItem;
-        private ToolStripStatusLabel totalSumToolStripStatusLabel;
-        private ToolStripStatusLabel surchargeCountToolStripStatusLabel;
-        private ToolStripStatusLabel surchargeSumToolStripStatusLabel;
-        private GroupBox groupBoxSort;
-        private RadioButton radioButtonSortDown;
-        private RadioButton radioButtonSortUp;
-        private ComboBox comboBoxSort;
-        private GroupBox groupBox1;
-        private CheckBox checkBoxDirection;
-        private ToolStripMenuItem changeAccountToolStripMenuItem;
-        private DataGridViewTextBoxColumn DirectionColumn;
-        private DataGridViewTextBoxColumn DateColumn;
-        private DataGridViewTextBoxColumn AmountOfDaysColumn;
-        private DataGridViewTextBoxColumn PriceForManColumn;
-        private DataGridViewTextBoxColumn AmountOfManColumn;
-        private DataGridViewCheckBoxColumn WiFiColumn;
-        private DataGridViewTextBoxColumn SurchargeColumn;
-        private DataGridViewTextBoxColumn TotalColumn;
         private BindingSource tourBindingSource;
-        private ComboBox comboBoxDirectionFilter;
-        private Label label5;
-        private TextBox textBoxPriceForManTo;
-        private Label label6;
-        private TextBox textBoxPriceForManFrom;
-        private Label label3;
-        private TextBox textBoxNightsTo;
-        private Label label4;
-        private TextBox textBoxNightsFrom;
-        private CheckBox checkBoxPriceForMan;
-        private CheckBox checkBoxAmountOfDays;
+        private Panel panel1;
+        private GroupBox groupBox1;
+        private Label labelNullError;
+        private Button buttonExport;
+        private Button buttonList;
         private RadioButton radioButtonWiFiFalse;
         private RadioButton radioButtonWiFiTrue;
         private Label label11;
@@ -778,5 +835,48 @@
         private TextBox textBoxAmountOfMansFrom;
         private CheckBox checkBoxSurchage;
         private CheckBox checkBoxAmountOfMan;
+        private Label label5;
+        private TextBox textBoxPriceForManTo;
+        private Label label6;
+        private TextBox textBoxPriceForManFrom;
+        private Label label3;
+        private TextBox textBoxNightsTo;
+        private Label label4;
+        private TextBox textBoxNightsFrom;
+        private CheckBox checkBoxPriceForMan;
+        private CheckBox checkBoxAmountOfDays;
+        private ComboBox comboBoxDirectionFilter;
+        private CheckBox checkBoxDirection;
+        private GroupBox groupBoxSort;
+        private RadioButton radioButtonSortDown;
+        private RadioButton radioButtonSortUp;
+        private ComboBox comboBoxSort;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem правкаToolStripMenuItem;
+        private ToolStripMenuItem addToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem deleteToolStripMenuItem;
+        private ToolStripMenuItem changeAccountToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private MenuStrip menuStrip1;
+        private ToolStripStatusLabel totalToolStripStatusLabel;
+        private ToolStripStatusLabel totalSumToolStripStatusLabel;
+        private ToolStripStatusLabel surchargeCountToolStripStatusLabel;
+        private ToolStripStatusLabel surchargeSumToolStripStatusLabel;
+        private StatusStrip statusStrip1;
+        private Panel panel2;
+        private DataGridView toursDataGridView;
+        private DataGridViewTextBoxColumn DirectionColumn;
+        private DataGridViewTextBoxColumn DateColumn;
+        private DataGridViewTextBoxColumn AmountOfDaysColumn;
+        private DataGridViewTextBoxColumn PriceForManColumn;
+        private DataGridViewTextBoxColumn AmountOfManColumn;
+        private DataGridViewCheckBoxColumn WiFiColumn;
+        private DataGridViewTextBoxColumn SurchargeColumn;
+        private DataGridViewTextBoxColumn TotalColumn;
+        private Panel panel3;
+        private ToolStripMenuItem accountsToolStripMenuItem;
     }
 }
