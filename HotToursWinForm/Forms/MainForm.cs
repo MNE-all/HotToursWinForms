@@ -3,6 +3,7 @@ using HotTours.Models;
 using System.Collections.Generic;
 using System.Drawing.Text;
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace HotTours
 {
@@ -49,11 +50,6 @@ namespace HotTours
         private void MakeSortAndFilter()
         {
             tours = BusinessLogic.Read();
-
-            if (tours.Count == 0)
-            {
-                tours = BusinessLogic.GenerateTours();
-            }
 
             // Sort
             SortTours(ref tours);
@@ -431,9 +427,11 @@ namespace HotTours
         {
             if (MessageBox.Show("Вы уверены?", "Предупреждение об удалении!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                // обращение к бл
-                BusinessLogic.DeleteTour((Tour)toursDataGridView
-                    .Rows[toursDataGridView.SelectedRows[0].Index].DataBoundItem);
+                foreach (DataGridViewRow row in toursDataGridView.SelectedRows)
+                {
+                    BusinessLogic.DeleteTour((Tour)toursDataGridView
+                    .Rows[row.Index].DataBoundItem);
+                }
                 MakeSortAndFilter();
             }
         }
@@ -476,6 +474,12 @@ namespace HotTours
             }
 
 
+        }
+
+        private void сгенерировать100ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BusinessLogic.GenerateTours();
+            MakeSortAndFilter();
         }
     }
 }

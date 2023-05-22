@@ -28,842 +28,798 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tourBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonList = new System.Windows.Forms.Button();
-            this.labelNullError = new System.Windows.Forms.Label();
-            this.buttonExport = new System.Windows.Forms.Button();
-            this.radioButtonWiFiFalse = new System.Windows.Forms.RadioButton();
-            this.radioButtonWiFiTrue = new System.Windows.Forms.RadioButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxTotalPriceTo = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxTotalPriceFrom = new System.Windows.Forms.TextBox();
-            this.checkBoxWiFi = new System.Windows.Forms.CheckBox();
-            this.checkBoxTotalPrice = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxSurchageTo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSurchageFrom = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxAmountOfMansTo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxAmountOfMansFrom = new System.Windows.Forms.TextBox();
-            this.checkBoxSurchage = new System.Windows.Forms.CheckBox();
-            this.checkBoxAmountOfMan = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxPriceForManTo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxPriceForManFrom = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNightsTo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxNightsFrom = new System.Windows.Forms.TextBox();
-            this.checkBoxPriceForMan = new System.Windows.Forms.CheckBox();
-            this.checkBoxAmountOfDays = new System.Windows.Forms.CheckBox();
-            this.comboBoxDirectionFilter = new System.Windows.Forms.ComboBox();
-            this.checkBoxDirection = new System.Windows.Forms.CheckBox();
-            this.groupBoxSort = new System.Windows.Forms.GroupBox();
-            this.radioButtonSortDown = new System.Windows.Forms.RadioButton();
-            this.radioButtonSortUp = new System.Windows.Forms.RadioButton();
-            this.comboBoxSort = new System.Windows.Forms.ComboBox();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.accountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.totalToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.totalSumToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.surchargeCountToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.surchargeSumToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.toursDataGridView = new System.Windows.Forms.DataGridView();
-            this.DirectionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountOfDaysColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceForManColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountOfManColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WiFiColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SurchargeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.tourBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.groupBoxSort.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toursDataGridView)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            tourBindingSource = new BindingSource(components);
+            panel1 = new Panel();
+            groupBox1 = new GroupBox();
+            panel3 = new Panel();
+            buttonList = new Button();
+            labelNullError = new Label();
+            buttonExport = new Button();
+            radioButtonWiFiFalse = new RadioButton();
+            radioButtonWiFiTrue = new RadioButton();
+            label11 = new Label();
+            textBoxTotalPriceTo = new TextBox();
+            label12 = new Label();
+            textBoxTotalPriceFrom = new TextBox();
+            checkBoxWiFi = new CheckBox();
+            checkBoxTotalPrice = new CheckBox();
+            label1 = new Label();
+            textBoxSurchageTo = new TextBox();
+            label2 = new Label();
+            textBoxSurchageFrom = new TextBox();
+            label7 = new Label();
+            textBoxAmountOfMansTo = new TextBox();
+            label8 = new Label();
+            textBoxAmountOfMansFrom = new TextBox();
+            checkBoxSurchage = new CheckBox();
+            checkBoxAmountOfMan = new CheckBox();
+            label5 = new Label();
+            textBoxPriceForManTo = new TextBox();
+            label6 = new Label();
+            textBoxPriceForManFrom = new TextBox();
+            label3 = new Label();
+            textBoxNightsTo = new TextBox();
+            label4 = new Label();
+            textBoxNightsFrom = new TextBox();
+            checkBoxPriceForMan = new CheckBox();
+            checkBoxAmountOfDays = new CheckBox();
+            comboBoxDirectionFilter = new ComboBox();
+            checkBoxDirection = new CheckBox();
+            groupBoxSort = new GroupBox();
+            radioButtonSortDown = new RadioButton();
+            radioButtonSortUp = new RadioButton();
+            comboBoxSort = new ComboBox();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            правкаToolStripMenuItem = new ToolStripMenuItem();
+            addToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
+            changeAccountToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
+            accountsToolStripMenuItem = new ToolStripMenuItem();
+            totalToolStripStatusLabel = new ToolStripStatusLabel();
+            totalSumToolStripStatusLabel = new ToolStripStatusLabel();
+            surchargeCountToolStripStatusLabel = new ToolStripStatusLabel();
+            surchargeSumToolStripStatusLabel = new ToolStripStatusLabel();
+            statusStrip1 = new StatusStrip();
+            panel2 = new Panel();
+            toursDataGridView = new DataGridView();
+            DirectionColumn = new DataGridViewTextBoxColumn();
+            DateColumn = new DataGridViewTextBoxColumn();
+            AmountOfDaysColumn = new DataGridViewTextBoxColumn();
+            PriceForManColumn = new DataGridViewTextBoxColumn();
+            AmountOfManColumn = new DataGridViewTextBoxColumn();
+            WiFiColumn = new DataGridViewCheckBoxColumn();
+            SurchargeColumn = new DataGridViewTextBoxColumn();
+            TotalColumn = new DataGridViewTextBoxColumn();
+            сгенерировать100ToolStripMenuItem = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)tourBindingSource).BeginInit();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            panel3.SuspendLayout();
+            groupBoxSort.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)toursDataGridView).BeginInit();
+            SuspendLayout();
             // 
             // tourBindingSource
             // 
-            this.tourBindingSource.DataSource = typeof(HotTours.Models.Tour);
+            tourBindingSource.DataSource = typeof(Models.Tour);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.groupBoxSort);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1060, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(522, 799);
-            this.panel1.TabIndex = 5;
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(groupBoxSort);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(927, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(457, 595);
+            panel1.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.labelNullError);
-            this.groupBox1.Controls.Add(this.buttonExport);
-            this.groupBox1.Controls.Add(this.radioButtonWiFiFalse);
-            this.groupBox1.Controls.Add(this.radioButtonWiFiTrue);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBoxTotalPriceTo);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBoxTotalPriceFrom);
-            this.groupBox1.Controls.Add(this.checkBoxWiFi);
-            this.groupBox1.Controls.Add(this.checkBoxTotalPrice);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBoxSurchageTo);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBoxSurchageFrom);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBoxAmountOfMansTo);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBoxAmountOfMansFrom);
-            this.groupBox1.Controls.Add(this.checkBoxSurchage);
-            this.groupBox1.Controls.Add(this.checkBoxAmountOfMan);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBoxPriceForManTo);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBoxPriceForManFrom);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBoxNightsTo);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBoxNightsFrom);
-            this.groupBox1.Controls.Add(this.checkBoxPriceForMan);
-            this.groupBox1.Controls.Add(this.checkBoxAmountOfDays);
-            this.groupBox1.Controls.Add(this.comboBoxDirectionFilter);
-            this.groupBox1.Controls.Add(this.checkBoxDirection);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 80);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(522, 719);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Фильтры";
+            groupBox1.Controls.Add(panel3);
+            groupBox1.Controls.Add(labelNullError);
+            groupBox1.Controls.Add(buttonExport);
+            groupBox1.Controls.Add(radioButtonWiFiFalse);
+            groupBox1.Controls.Add(radioButtonWiFiTrue);
+            groupBox1.Controls.Add(label11);
+            groupBox1.Controls.Add(textBoxTotalPriceTo);
+            groupBox1.Controls.Add(label12);
+            groupBox1.Controls.Add(textBoxTotalPriceFrom);
+            groupBox1.Controls.Add(checkBoxWiFi);
+            groupBox1.Controls.Add(checkBoxTotalPrice);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(textBoxSurchageTo);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(textBoxSurchageFrom);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(textBoxAmountOfMansTo);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(textBoxAmountOfMansFrom);
+            groupBox1.Controls.Add(checkBoxSurchage);
+            groupBox1.Controls.Add(checkBoxAmountOfMan);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(textBoxPriceForManTo);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(textBoxPriceForManFrom);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(textBoxNightsTo);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(textBoxNightsFrom);
+            groupBox1.Controls.Add(checkBoxPriceForMan);
+            groupBox1.Controls.Add(checkBoxAmountOfDays);
+            groupBox1.Controls.Add(comboBoxDirectionFilter);
+            groupBox1.Controls.Add(checkBoxDirection);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Location = new Point(0, 60);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(457, 535);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Фильтры";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.buttonList);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 526);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(516, 133);
-            this.panel3.TabIndex = 113;
+            panel3.Controls.Add(buttonList);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(3, 390);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(451, 100);
+            panel3.TabIndex = 113;
             // 
             // buttonList
             // 
-            this.buttonList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonList.Location = new System.Drawing.Point(0, 0);
-            this.buttonList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonList.Name = "buttonList";
-            this.buttonList.Size = new System.Drawing.Size(516, 61);
-            this.buttonList.TabIndex = 110;
-            this.buttonList.Text = "Списком";
-            this.buttonList.UseVisualStyleBackColor = true;
-            this.buttonList.Click += new System.EventHandler(this.buttonList_Click);
+            buttonList.Dock = DockStyle.Top;
+            buttonList.Location = new Point(0, 0);
+            buttonList.Name = "buttonList";
+            buttonList.Size = new Size(451, 46);
+            buttonList.TabIndex = 110;
+            buttonList.Text = "Списком";
+            buttonList.UseVisualStyleBackColor = true;
+            buttonList.Click += buttonList_Click;
             // 
             // labelNullError
             // 
-            this.labelNullError.AutoSize = true;
-            this.labelNullError.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNullError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.labelNullError.Location = new System.Drawing.Point(61, 388);
-            this.labelNullError.Name = "labelNullError";
-            this.labelNullError.Size = new System.Drawing.Size(460, 32);
-            this.labelNullError.TabIndex = 112;
-            this.labelNullError.Text = "По вашему запросу ничего не найдено!";
-            this.labelNullError.Visible = false;
+            labelNullError.AutoSize = true;
+            labelNullError.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNullError.ForeColor = Color.OrangeRed;
+            labelNullError.Location = new Point(53, 291);
+            labelNullError.Name = "labelNullError";
+            labelNullError.Size = new Size(359, 25);
+            labelNullError.TabIndex = 112;
+            labelNullError.Text = "По вашему запросу ничего не найдено!";
+            labelNullError.Visible = false;
             // 
             // buttonExport
             // 
-            this.buttonExport.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonExport.Location = new System.Drawing.Point(3, 659);
-            this.buttonExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(516, 56);
-            this.buttonExport.TabIndex = 111;
-            this.buttonExport.Text = "Экспорт";
-            this.buttonExport.UseVisualStyleBackColor = true;
-            this.buttonExport.Click += new System.EventHandler(this.ExportClick);
+            buttonExport.Dock = DockStyle.Bottom;
+            buttonExport.Location = new Point(3, 490);
+            buttonExport.Name = "buttonExport";
+            buttonExport.Size = new Size(451, 42);
+            buttonExport.TabIndex = 111;
+            buttonExport.Text = "Экспорт";
+            buttonExport.UseVisualStyleBackColor = true;
+            buttonExport.Click += ExportClick;
             // 
             // radioButtonWiFiFalse
             // 
-            this.radioButtonWiFiFalse.AutoSize = true;
-            this.radioButtonWiFiFalse.Enabled = false;
-            this.radioButtonWiFiFalse.Location = new System.Drawing.Point(392, 276);
-            this.radioButtonWiFiFalse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButtonWiFiFalse.Name = "radioButtonWiFiFalse";
-            this.radioButtonWiFiFalse.Size = new System.Drawing.Size(59, 24);
-            this.radioButtonWiFiFalse.TabIndex = 109;
-            this.radioButtonWiFiFalse.Text = " Нет";
-            this.radioButtonWiFiFalse.UseVisualStyleBackColor = true;
-            this.radioButtonWiFiFalse.Click += new System.EventHandler(this.MakeSortAndFilter);
+            radioButtonWiFiFalse.AutoSize = true;
+            radioButtonWiFiFalse.Enabled = false;
+            radioButtonWiFiFalse.Location = new Point(343, 207);
+            radioButtonWiFiFalse.Name = "radioButtonWiFiFalse";
+            radioButtonWiFiFalse.Size = new Size(48, 19);
+            radioButtonWiFiFalse.TabIndex = 109;
+            radioButtonWiFiFalse.Text = " Нет";
+            radioButtonWiFiFalse.UseVisualStyleBackColor = true;
+            radioButtonWiFiFalse.Click += MakeSortAndFilter;
             // 
             // radioButtonWiFiTrue
             // 
-            this.radioButtonWiFiTrue.AutoSize = true;
-            this.radioButtonWiFiTrue.Checked = true;
-            this.radioButtonWiFiTrue.Enabled = false;
-            this.radioButtonWiFiTrue.Location = new System.Drawing.Point(234, 276);
-            this.radioButtonWiFiTrue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButtonWiFiTrue.Name = "radioButtonWiFiTrue";
-            this.radioButtonWiFiTrue.Size = new System.Drawing.Size(59, 24);
-            this.radioButtonWiFiTrue.TabIndex = 108;
-            this.radioButtonWiFiTrue.TabStop = true;
-            this.radioButtonWiFiTrue.Text = "Есть";
-            this.radioButtonWiFiTrue.UseVisualStyleBackColor = true;
-            this.radioButtonWiFiTrue.Click += new System.EventHandler(this.MakeSortAndFilter);
+            radioButtonWiFiTrue.AutoSize = true;
+            radioButtonWiFiTrue.Checked = true;
+            radioButtonWiFiTrue.Enabled = false;
+            radioButtonWiFiTrue.Location = new Point(205, 207);
+            radioButtonWiFiTrue.Name = "radioButtonWiFiTrue";
+            radioButtonWiFiTrue.Size = new Size(48, 19);
+            radioButtonWiFiTrue.TabIndex = 108;
+            radioButtonWiFiTrue.TabStop = true;
+            radioButtonWiFiTrue.Text = "Есть";
+            radioButtonWiFiTrue.UseVisualStyleBackColor = true;
+            radioButtonWiFiTrue.Click += MakeSortAndFilter;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(362, 239);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 20);
-            this.label11.TabIndex = 107;
-            this.label11.Text = "до";
+            label11.AutoSize = true;
+            label11.Location = new Point(317, 179);
+            label11.Name = "label11";
+            label11.Size = new Size(20, 15);
+            label11.TabIndex = 107;
+            label11.Text = "до";
             // 
             // textBoxTotalPriceTo
             // 
-            this.textBoxTotalPriceTo.Enabled = false;
-            this.textBoxTotalPriceTo.Location = new System.Drawing.Point(392, 235);
-            this.textBoxTotalPriceTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxTotalPriceTo.Name = "textBoxTotalPriceTo";
-            this.textBoxTotalPriceTo.Size = new System.Drawing.Size(100, 27);
-            this.textBoxTotalPriceTo.TabIndex = 106;
-            this.textBoxTotalPriceTo.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxTotalPriceTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxTotalPriceTo.Enabled = false;
+            textBoxTotalPriceTo.Location = new Point(343, 176);
+            textBoxTotalPriceTo.Name = "textBoxTotalPriceTo";
+            textBoxTotalPriceTo.Size = new Size(88, 23);
+            textBoxTotalPriceTo.TabIndex = 106;
+            textBoxTotalPriceTo.TextChanged += MakeSortAndFilter;
+            textBoxTotalPriceTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(206, 239);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 20);
-            this.label12.TabIndex = 105;
-            this.label12.Text = "от";
+            label12.AutoSize = true;
+            label12.Location = new Point(180, 179);
+            label12.Name = "label12";
+            label12.Size = new Size(19, 15);
+            label12.TabIndex = 105;
+            label12.Text = "от";
             // 
             // textBoxTotalPriceFrom
             // 
-            this.textBoxTotalPriceFrom.Enabled = false;
-            this.textBoxTotalPriceFrom.Location = new System.Drawing.Point(234, 235);
-            this.textBoxTotalPriceFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxTotalPriceFrom.Name = "textBoxTotalPriceFrom";
-            this.textBoxTotalPriceFrom.Size = new System.Drawing.Size(106, 27);
-            this.textBoxTotalPriceFrom.TabIndex = 104;
-            this.textBoxTotalPriceFrom.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxTotalPriceFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxTotalPriceFrom.Enabled = false;
+            textBoxTotalPriceFrom.Location = new Point(205, 176);
+            textBoxTotalPriceFrom.Name = "textBoxTotalPriceFrom";
+            textBoxTotalPriceFrom.Size = new Size(93, 23);
+            textBoxTotalPriceFrom.TabIndex = 104;
+            textBoxTotalPriceFrom.TextChanged += MakeSortAndFilter;
+            textBoxTotalPriceFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // checkBoxWiFi
             // 
-            this.checkBoxWiFi.AutoSize = true;
-            this.checkBoxWiFi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxWiFi.Location = new System.Drawing.Point(25, 276);
-            this.checkBoxWiFi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxWiFi.Name = "checkBoxWiFi";
-            this.checkBoxWiFi.Size = new System.Drawing.Size(125, 24);
-            this.checkBoxWiFi.TabIndex = 103;
-            this.checkBoxWiFi.Text = "Наличие WiFi";
-            this.checkBoxWiFi.UseVisualStyleBackColor = true;
-            this.checkBoxWiFi.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxWiFi.AutoSize = true;
+            checkBoxWiFi.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxWiFi.Location = new Point(22, 207);
+            checkBoxWiFi.Name = "checkBoxWiFi";
+            checkBoxWiFi.Size = new Size(101, 19);
+            checkBoxWiFi.TabIndex = 103;
+            checkBoxWiFi.Text = "Наличие WiFi";
+            checkBoxWiFi.UseVisualStyleBackColor = true;
+            checkBoxWiFi.Click += MakeSortAndFilter;
             // 
             // checkBoxTotalPrice
             // 
-            this.checkBoxTotalPrice.AutoSize = true;
-            this.checkBoxTotalPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxTotalPrice.Location = new System.Drawing.Point(25, 237);
-            this.checkBoxTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxTotalPrice.Name = "checkBoxTotalPrice";
-            this.checkBoxTotalPrice.Size = new System.Drawing.Size(155, 24);
-            this.checkBoxTotalPrice.TabIndex = 102;
-            this.checkBoxTotalPrice.Text = "Общая стоимость";
-            this.checkBoxTotalPrice.UseVisualStyleBackColor = true;
-            this.checkBoxTotalPrice.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxTotalPrice.AutoSize = true;
+            checkBoxTotalPrice.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxTotalPrice.Location = new Point(22, 178);
+            checkBoxTotalPrice.Name = "checkBoxTotalPrice";
+            checkBoxTotalPrice.Size = new Size(126, 19);
+            checkBoxTotalPrice.TabIndex = 102;
+            checkBoxTotalPrice.Text = "Общая стоимость";
+            checkBoxTotalPrice.UseVisualStyleBackColor = true;
+            checkBoxTotalPrice.Click += MakeSortAndFilter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
-            this.label1.TabIndex = 101;
-            this.label1.Text = "до";
+            label1.AutoSize = true;
+            label1.Location = new Point(319, 150);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 15);
+            label1.TabIndex = 101;
+            label1.Text = "до";
             // 
             // textBoxSurchageTo
             // 
-            this.textBoxSurchageTo.Enabled = false;
-            this.textBoxSurchageTo.Location = new System.Drawing.Point(392, 196);
-            this.textBoxSurchageTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxSurchageTo.Name = "textBoxSurchageTo";
-            this.textBoxSurchageTo.Size = new System.Drawing.Size(100, 27);
-            this.textBoxSurchageTo.TabIndex = 100;
-            this.textBoxSurchageTo.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxSurchageTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxSurchageTo.Enabled = false;
+            textBoxSurchageTo.Location = new Point(343, 147);
+            textBoxSurchageTo.Name = "textBoxSurchageTo";
+            textBoxSurchageTo.Size = new Size(88, 23);
+            textBoxSurchageTo.TabIndex = 100;
+            textBoxSurchageTo.TextChanged += MakeSortAndFilter;
+            textBoxSurchageTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 20);
-            this.label2.TabIndex = 99;
-            this.label2.Text = "от";
+            label2.AutoSize = true;
+            label2.Location = new Point(180, 150);
+            label2.Name = "label2";
+            label2.Size = new Size(19, 15);
+            label2.TabIndex = 99;
+            label2.Text = "от";
             // 
             // textBoxSurchageFrom
             // 
-            this.textBoxSurchageFrom.Enabled = false;
-            this.textBoxSurchageFrom.Location = new System.Drawing.Point(234, 196);
-            this.textBoxSurchageFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxSurchageFrom.Name = "textBoxSurchageFrom";
-            this.textBoxSurchageFrom.Size = new System.Drawing.Size(106, 27);
-            this.textBoxSurchageFrom.TabIndex = 98;
-            this.textBoxSurchageFrom.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxSurchageFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxSurchageFrom.Enabled = false;
+            textBoxSurchageFrom.Location = new Point(205, 147);
+            textBoxSurchageFrom.Name = "textBoxSurchageFrom";
+            textBoxSurchageFrom.Size = new Size(93, 23);
+            textBoxSurchageFrom.TabIndex = 98;
+            textBoxSurchageFrom.TextChanged += MakeSortAndFilter;
+            textBoxSurchageFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(362, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 20);
-            this.label7.TabIndex = 97;
-            this.label7.Text = "до";
+            label7.AutoSize = true;
+            label7.Location = new Point(317, 121);
+            label7.Name = "label7";
+            label7.Size = new Size(20, 15);
+            label7.TabIndex = 97;
+            label7.Text = "до";
             // 
             // textBoxAmountOfMansTo
             // 
-            this.textBoxAmountOfMansTo.Enabled = false;
-            this.textBoxAmountOfMansTo.Location = new System.Drawing.Point(392, 157);
-            this.textBoxAmountOfMansTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxAmountOfMansTo.Name = "textBoxAmountOfMansTo";
-            this.textBoxAmountOfMansTo.Size = new System.Drawing.Size(100, 27);
-            this.textBoxAmountOfMansTo.TabIndex = 96;
-            this.textBoxAmountOfMansTo.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxAmountOfMansTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxAmountOfMansTo.Enabled = false;
+            textBoxAmountOfMansTo.Location = new Point(343, 118);
+            textBoxAmountOfMansTo.Name = "textBoxAmountOfMansTo";
+            textBoxAmountOfMansTo.Size = new Size(88, 23);
+            textBoxAmountOfMansTo.TabIndex = 96;
+            textBoxAmountOfMansTo.TextChanged += MakeSortAndFilter;
+            textBoxAmountOfMansTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(206, 161);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 20);
-            this.label8.TabIndex = 95;
-            this.label8.Text = "от";
+            label8.AutoSize = true;
+            label8.Location = new Point(180, 121);
+            label8.Name = "label8";
+            label8.Size = new Size(19, 15);
+            label8.TabIndex = 95;
+            label8.Text = "от";
             // 
             // textBoxAmountOfMansFrom
             // 
-            this.textBoxAmountOfMansFrom.Enabled = false;
-            this.textBoxAmountOfMansFrom.Location = new System.Drawing.Point(234, 157);
-            this.textBoxAmountOfMansFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxAmountOfMansFrom.Name = "textBoxAmountOfMansFrom";
-            this.textBoxAmountOfMansFrom.Size = new System.Drawing.Size(106, 27);
-            this.textBoxAmountOfMansFrom.TabIndex = 94;
-            this.textBoxAmountOfMansFrom.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxAmountOfMansFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxAmountOfMansFrom.Enabled = false;
+            textBoxAmountOfMansFrom.Location = new Point(205, 118);
+            textBoxAmountOfMansFrom.Name = "textBoxAmountOfMansFrom";
+            textBoxAmountOfMansFrom.Size = new Size(93, 23);
+            textBoxAmountOfMansFrom.TabIndex = 94;
+            textBoxAmountOfMansFrom.TextChanged += MakeSortAndFilter;
+            textBoxAmountOfMansFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // checkBoxSurchage
             // 
-            this.checkBoxSurchage.AutoSize = true;
-            this.checkBoxSurchage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxSurchage.Location = new System.Drawing.Point(25, 199);
-            this.checkBoxSurchage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxSurchage.Name = "checkBoxSurchage";
-            this.checkBoxSurchage.Size = new System.Drawing.Size(131, 24);
-            this.checkBoxSurchage.TabIndex = 93;
-            this.checkBoxSurchage.Text = "Доплаты (руб)";
-            this.checkBoxSurchage.UseVisualStyleBackColor = true;
-            this.checkBoxSurchage.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxSurchage.AutoSize = true;
+            checkBoxSurchage.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxSurchage.Location = new Point(22, 149);
+            checkBoxSurchage.Name = "checkBoxSurchage";
+            checkBoxSurchage.Size = new Size(106, 19);
+            checkBoxSurchage.TabIndex = 93;
+            checkBoxSurchage.Text = "Доплаты (руб)";
+            checkBoxSurchage.UseVisualStyleBackColor = true;
+            checkBoxSurchage.Click += MakeSortAndFilter;
             // 
             // checkBoxAmountOfMan
             // 
-            this.checkBoxAmountOfMan.AutoSize = true;
-            this.checkBoxAmountOfMan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxAmountOfMan.Location = new System.Drawing.Point(25, 160);
-            this.checkBoxAmountOfMan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxAmountOfMan.Name = "checkBoxAmountOfMan";
-            this.checkBoxAmountOfMan.Size = new System.Drawing.Size(160, 24);
-            this.checkBoxAmountOfMan.TabIndex = 92;
-            this.checkBoxAmountOfMan.Text = "По кол-ву человек";
-            this.checkBoxAmountOfMan.UseVisualStyleBackColor = true;
-            this.checkBoxAmountOfMan.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxAmountOfMan.AutoSize = true;
+            checkBoxAmountOfMan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxAmountOfMan.Location = new Point(22, 120);
+            checkBoxAmountOfMan.Name = "checkBoxAmountOfMan";
+            checkBoxAmountOfMan.Size = new Size(130, 19);
+            checkBoxAmountOfMan.TabIndex = 92;
+            checkBoxAmountOfMan.Text = "По кол-ву человек";
+            checkBoxAmountOfMan.UseVisualStyleBackColor = true;
+            checkBoxAmountOfMan.Click += MakeSortAndFilter;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(365, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 20);
-            this.label5.TabIndex = 91;
-            this.label5.Text = "до";
+            label5.AutoSize = true;
+            label5.Location = new Point(319, 92);
+            label5.Name = "label5";
+            label5.Size = new Size(20, 15);
+            label5.TabIndex = 91;
+            label5.Text = "до";
             // 
             // textBoxPriceForManTo
             // 
-            this.textBoxPriceForManTo.Enabled = false;
-            this.textBoxPriceForManTo.Location = new System.Drawing.Point(392, 119);
-            this.textBoxPriceForManTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxPriceForManTo.Name = "textBoxPriceForManTo";
-            this.textBoxPriceForManTo.Size = new System.Drawing.Size(100, 27);
-            this.textBoxPriceForManTo.TabIndex = 90;
-            this.textBoxPriceForManTo.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxPriceForManTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxPriceForManTo.Enabled = false;
+            textBoxPriceForManTo.Location = new Point(343, 89);
+            textBoxPriceForManTo.Name = "textBoxPriceForManTo";
+            textBoxPriceForManTo.Size = new Size(88, 23);
+            textBoxPriceForManTo.TabIndex = 90;
+            textBoxPriceForManTo.TextChanged += MakeSortAndFilter;
+            textBoxPriceForManTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(206, 123);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 20);
-            this.label6.TabIndex = 89;
-            this.label6.Text = "от";
+            label6.AutoSize = true;
+            label6.Location = new Point(180, 92);
+            label6.Name = "label6";
+            label6.Size = new Size(19, 15);
+            label6.TabIndex = 89;
+            label6.Text = "от";
             // 
             // textBoxPriceForManFrom
             // 
-            this.textBoxPriceForManFrom.Enabled = false;
-            this.textBoxPriceForManFrom.Location = new System.Drawing.Point(234, 119);
-            this.textBoxPriceForManFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxPriceForManFrom.Name = "textBoxPriceForManFrom";
-            this.textBoxPriceForManFrom.Size = new System.Drawing.Size(106, 27);
-            this.textBoxPriceForManFrom.TabIndex = 88;
-            this.textBoxPriceForManFrom.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxPriceForManFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxPriceForManFrom.Enabled = false;
+            textBoxPriceForManFrom.Location = new Point(205, 89);
+            textBoxPriceForManFrom.Name = "textBoxPriceForManFrom";
+            textBoxPriceForManFrom.Size = new Size(93, 23);
+            textBoxPriceForManFrom.TabIndex = 88;
+            textBoxPriceForManFrom.TextChanged += MakeSortAndFilter;
+            textBoxPriceForManFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(362, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 20);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "до";
+            label3.AutoSize = true;
+            label3.Location = new Point(317, 63);
+            label3.Name = "label3";
+            label3.Size = new Size(20, 15);
+            label3.TabIndex = 87;
+            label3.Text = "до";
             // 
             // textBoxNightsTo
             // 
-            this.textBoxNightsTo.Enabled = false;
-            this.textBoxNightsTo.Location = new System.Drawing.Point(392, 80);
-            this.textBoxNightsTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNightsTo.Name = "textBoxNightsTo";
-            this.textBoxNightsTo.Size = new System.Drawing.Size(100, 27);
-            this.textBoxNightsTo.TabIndex = 86;
-            this.textBoxNightsTo.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxNightsTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxNightsTo.Enabled = false;
+            textBoxNightsTo.Location = new Point(343, 60);
+            textBoxNightsTo.Name = "textBoxNightsTo";
+            textBoxNightsTo.Size = new Size(88, 23);
+            textBoxNightsTo.TabIndex = 86;
+            textBoxNightsTo.TextChanged += MakeSortAndFilter;
+            textBoxNightsTo.KeyPress += textBoxFromTo_KeyPress;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(206, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 20);
-            this.label4.TabIndex = 85;
-            this.label4.Text = "от";
+            label4.AutoSize = true;
+            label4.Location = new Point(180, 63);
+            label4.Name = "label4";
+            label4.Size = new Size(19, 15);
+            label4.TabIndex = 85;
+            label4.Text = "от";
             // 
             // textBoxNightsFrom
             // 
-            this.textBoxNightsFrom.Enabled = false;
-            this.textBoxNightsFrom.Location = new System.Drawing.Point(234, 80);
-            this.textBoxNightsFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNightsFrom.Name = "textBoxNightsFrom";
-            this.textBoxNightsFrom.Size = new System.Drawing.Size(106, 27);
-            this.textBoxNightsFrom.TabIndex = 84;
-            this.textBoxNightsFrom.TextChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.textBoxNightsFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFromTo_KeyPress);
+            textBoxNightsFrom.Enabled = false;
+            textBoxNightsFrom.Location = new Point(205, 60);
+            textBoxNightsFrom.Name = "textBoxNightsFrom";
+            textBoxNightsFrom.Size = new Size(93, 23);
+            textBoxNightsFrom.TabIndex = 84;
+            textBoxNightsFrom.TextChanged += MakeSortAndFilter;
+            textBoxNightsFrom.KeyPress += textBoxFromTo_KeyPress;
             // 
             // checkBoxPriceForMan
             // 
-            this.checkBoxPriceForMan.AutoSize = true;
-            this.checkBoxPriceForMan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPriceForMan.Location = new System.Drawing.Point(25, 121);
-            this.checkBoxPriceForMan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxPriceForMan.Name = "checkBoxPriceForMan";
-            this.checkBoxPriceForMan.Size = new System.Drawing.Size(178, 24);
-            this.checkBoxPriceForMan.TabIndex = 83;
-            this.checkBoxPriceForMan.Text = "По стоимости за чел.";
-            this.checkBoxPriceForMan.UseVisualStyleBackColor = true;
-            this.checkBoxPriceForMan.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxPriceForMan.AutoSize = true;
+            checkBoxPriceForMan.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxPriceForMan.Location = new Point(22, 91);
+            checkBoxPriceForMan.Name = "checkBoxPriceForMan";
+            checkBoxPriceForMan.Size = new Size(144, 19);
+            checkBoxPriceForMan.TabIndex = 83;
+            checkBoxPriceForMan.Text = "По стоимости за чел.";
+            checkBoxPriceForMan.UseVisualStyleBackColor = true;
+            checkBoxPriceForMan.Click += MakeSortAndFilter;
             // 
             // checkBoxAmountOfDays
             // 
-            this.checkBoxAmountOfDays.AutoSize = true;
-            this.checkBoxAmountOfDays.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxAmountOfDays.Location = new System.Drawing.Point(25, 83);
-            this.checkBoxAmountOfDays.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxAmountOfDays.Name = "checkBoxAmountOfDays";
-            this.checkBoxAmountOfDays.Size = new System.Drawing.Size(147, 24);
-            this.checkBoxAmountOfDays.TabIndex = 82;
-            this.checkBoxAmountOfDays.Text = "По кол-ву ночей";
-            this.checkBoxAmountOfDays.UseVisualStyleBackColor = true;
-            this.checkBoxAmountOfDays.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxAmountOfDays.AutoSize = true;
+            checkBoxAmountOfDays.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxAmountOfDays.Location = new Point(22, 62);
+            checkBoxAmountOfDays.Name = "checkBoxAmountOfDays";
+            checkBoxAmountOfDays.Size = new Size(119, 19);
+            checkBoxAmountOfDays.TabIndex = 82;
+            checkBoxAmountOfDays.Text = "По кол-ву ночей";
+            checkBoxAmountOfDays.UseVisualStyleBackColor = true;
+            checkBoxAmountOfDays.Click += MakeSortAndFilter;
             // 
             // comboBoxDirectionFilter
             // 
-            this.comboBoxDirectionFilter.Enabled = false;
-            this.comboBoxDirectionFilter.FormattingEnabled = true;
-            this.comboBoxDirectionFilter.Location = new System.Drawing.Point(206, 41);
-            this.comboBoxDirectionFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxDirectionFilter.Name = "comboBoxDirectionFilter";
-            this.comboBoxDirectionFilter.Size = new System.Drawing.Size(286, 28);
-            this.comboBoxDirectionFilter.TabIndex = 1;
-            this.comboBoxDirectionFilter.SelectedIndexChanged += new System.EventHandler(this.MakeSortAndFilter);
+            comboBoxDirectionFilter.Enabled = false;
+            comboBoxDirectionFilter.FormattingEnabled = true;
+            comboBoxDirectionFilter.Location = new Point(180, 31);
+            comboBoxDirectionFilter.Name = "comboBoxDirectionFilter";
+            comboBoxDirectionFilter.Size = new Size(251, 23);
+            comboBoxDirectionFilter.TabIndex = 1;
+            comboBoxDirectionFilter.SelectedIndexChanged += MakeSortAndFilter;
             // 
             // checkBoxDirection
             // 
-            this.checkBoxDirection.AutoSize = true;
-            this.checkBoxDirection.Location = new System.Drawing.Point(25, 44);
-            this.checkBoxDirection.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxDirection.Name = "checkBoxDirection";
-            this.checkBoxDirection.Size = new System.Drawing.Size(152, 24);
-            this.checkBoxDirection.TabIndex = 0;
-            this.checkBoxDirection.Text = "По направлению";
-            this.checkBoxDirection.UseVisualStyleBackColor = true;
-            this.checkBoxDirection.Click += new System.EventHandler(this.MakeSortAndFilter);
+            checkBoxDirection.AutoSize = true;
+            checkBoxDirection.Location = new Point(22, 33);
+            checkBoxDirection.Name = "checkBoxDirection";
+            checkBoxDirection.Size = new Size(121, 19);
+            checkBoxDirection.TabIndex = 0;
+            checkBoxDirection.Text = "По направлению";
+            checkBoxDirection.UseVisualStyleBackColor = true;
+            checkBoxDirection.Click += MakeSortAndFilter;
             // 
             // groupBoxSort
             // 
-            this.groupBoxSort.Controls.Add(this.radioButtonSortDown);
-            this.groupBoxSort.Controls.Add(this.radioButtonSortUp);
-            this.groupBoxSort.Controls.Add(this.comboBoxSort);
-            this.groupBoxSort.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxSort.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxSort.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBoxSort.Name = "groupBoxSort";
-            this.groupBoxSort.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBoxSort.Size = new System.Drawing.Size(522, 80);
-            this.groupBoxSort.TabIndex = 5;
-            this.groupBoxSort.TabStop = false;
-            this.groupBoxSort.Text = "Сортировать по ";
+            groupBoxSort.Controls.Add(radioButtonSortDown);
+            groupBoxSort.Controls.Add(radioButtonSortUp);
+            groupBoxSort.Controls.Add(comboBoxSort);
+            groupBoxSort.Dock = DockStyle.Top;
+            groupBoxSort.Location = new Point(0, 0);
+            groupBoxSort.Name = "groupBoxSort";
+            groupBoxSort.Size = new Size(457, 60);
+            groupBoxSort.TabIndex = 5;
+            groupBoxSort.TabStop = false;
+            groupBoxSort.Text = "Сортировать по ";
             // 
             // radioButtonSortDown
             // 
-            this.radioButtonSortDown.AutoSize = true;
-            this.radioButtonSortDown.Location = new System.Drawing.Point(397, 31);
-            this.radioButtonSortDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButtonSortDown.Name = "radioButtonSortDown";
-            this.radioButtonSortDown.Size = new System.Drawing.Size(127, 24);
-            this.radioButtonSortDown.TabIndex = 2;
-            this.radioButtonSortDown.Text = "По убыванию";
-            this.radioButtonSortDown.UseVisualStyleBackColor = true;
-            this.radioButtonSortDown.Click += new System.EventHandler(this.MakeSortAndFilter);
+            radioButtonSortDown.AutoSize = true;
+            radioButtonSortDown.Location = new Point(347, 23);
+            radioButtonSortDown.Name = "radioButtonSortDown";
+            radioButtonSortDown.Size = new Size(102, 19);
+            radioButtonSortDown.TabIndex = 2;
+            radioButtonSortDown.Text = "По убыванию";
+            radioButtonSortDown.UseVisualStyleBackColor = true;
+            radioButtonSortDown.Click += MakeSortAndFilter;
             // 
             // radioButtonSortUp
             // 
-            this.radioButtonSortUp.AutoSize = true;
-            this.radioButtonSortUp.Checked = true;
-            this.radioButtonSortUp.Location = new System.Drawing.Point(257, 31);
-            this.radioButtonSortUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButtonSortUp.Name = "radioButtonSortUp";
-            this.radioButtonSortUp.Size = new System.Drawing.Size(146, 24);
-            this.radioButtonSortUp.TabIndex = 1;
-            this.radioButtonSortUp.TabStop = true;
-            this.radioButtonSortUp.Text = "По возрастанию";
-            this.radioButtonSortUp.UseVisualStyleBackColor = true;
-            this.radioButtonSortUp.Click += new System.EventHandler(this.MakeSortAndFilter);
+            radioButtonSortUp.AutoSize = true;
+            radioButtonSortUp.Checked = true;
+            radioButtonSortUp.Location = new Point(225, 23);
+            radioButtonSortUp.Name = "radioButtonSortUp";
+            radioButtonSortUp.Size = new Size(116, 19);
+            radioButtonSortUp.TabIndex = 1;
+            radioButtonSortUp.TabStop = true;
+            radioButtonSortUp.Text = "По возрастанию";
+            radioButtonSortUp.UseVisualStyleBackColor = true;
+            radioButtonSortUp.Click += MakeSortAndFilter;
             // 
             // comboBoxSort
             // 
-            this.comboBoxSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Location = new System.Drawing.Point(7, 29);
-            this.comboBoxSort.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxSort.Name = "comboBoxSort";
-            this.comboBoxSort.Size = new System.Drawing.Size(243, 28);
-            this.comboBoxSort.TabIndex = 0;
-            this.comboBoxSort.SelectedIndexChanged += new System.EventHandler(this.MakeSortAndFilter);
-            this.comboBoxSort.Click += new System.EventHandler(this.MakeSortAndFilter);
+            comboBoxSort.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSort.FormattingEnabled = true;
+            comboBoxSort.Location = new Point(6, 22);
+            comboBoxSort.Name = "comboBoxSort";
+            comboBoxSort.Size = new Size(213, 23);
+            comboBoxSort.TabIndex = 0;
+            comboBoxSort.SelectedIndexChanged += MakeSortAndFilter;
+            comboBoxSort.Click += MakeSortAndFilter;
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
-            this.fileToolStripMenuItem.Text = "Файл";
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(48, 20);
+            fileToolStripMenuItem.Text = "Файл";
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
-            this.exitToolStripMenuItem.Text = "Выход";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(109, 22);
+            exitToolStripMenuItem.Text = "Выход";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // правкаToolStripMenuItem
             // 
-            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.deleteToolStripMenuItem});
-            this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
-            this.правкаToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.правкаToolStripMenuItem.Text = "Правка";
+            правкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { сгенерировать100ToolStripMenuItem, addToolStripMenuItem, editToolStripMenuItem, toolStripSeparator1, deleteToolStripMenuItem });
+            правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
+            правкаToolStripMenuItem.Size = new Size(59, 20);
+            правкаToolStripMenuItem.Text = "Правка";
             // 
             // addToolStripMenuItem
             // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.addToolStripMenuItem.Text = "Добавить";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            addToolStripMenuItem.Name = "addToolStripMenuItem";
+            addToolStripMenuItem.Size = new Size(180, 22);
+            addToolStripMenuItem.Text = "Добавить";
+            addToolStripMenuItem.Click += addToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
-            this.editToolStripMenuItem.Enabled = false;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.editToolStripMenuItem.Text = "Изменить";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            editToolStripMenuItem.Enabled = false;
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Text = "Изменить";
+            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(158, 6);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // deleteToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem.Enabled = false;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.deleteToolStripMenuItem.Text = "Удалить";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            deleteToolStripMenuItem.Enabled = false;
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(180, 22);
+            deleteToolStripMenuItem.Text = "Удалить";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // changeAccountToolStripMenuItem
             // 
-            this.changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
-            this.changeAccountToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
-            this.changeAccountToolStripMenuItem.Text = "Сменить аккаунт";
-            this.changeAccountToolStripMenuItem.Click += new System.EventHandler(this.changeAccountToolStripMenuItem_Click);
+            changeAccountToolStripMenuItem.Name = "changeAccountToolStripMenuItem";
+            changeAccountToolStripMenuItem.Size = new Size(112, 20);
+            changeAccountToolStripMenuItem.Text = "Сменить аккаунт";
+            changeAccountToolStripMenuItem.Click += changeAccountToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
-            this.aboutToolStripMenuItem.Text = "О программе";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutClick);
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(94, 20);
+            aboutToolStripMenuItem.Text = "О программе";
+            aboutToolStripMenuItem.Click += AboutClick;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.правкаToolStripMenuItem,
-            this.changeAccountToolStripMenuItem,
-            this.accountsToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1582, 30);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, правкаToolStripMenuItem, changeAccountToolStripMenuItem, accountsToolStripMenuItem, aboutToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(1384, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // accountsToolStripMenuItem
             // 
-            this.accountsToolStripMenuItem.Name = "accountsToolStripMenuItem";
-            this.accountsToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.accountsToolStripMenuItem.Text = "Аккаунты";
-            this.accountsToolStripMenuItem.Click += new System.EventHandler(this.accountsToolStripMenuItem_Click);
+            accountsToolStripMenuItem.Name = "accountsToolStripMenuItem";
+            accountsToolStripMenuItem.Size = new Size(72, 20);
+            accountsToolStripMenuItem.Text = "Аккаунты";
+            accountsToolStripMenuItem.Click += accountsToolStripMenuItem_Click;
             // 
             // totalToolStripStatusLabel
             // 
-            this.totalToolStripStatusLabel.Name = "totalToolStripStatusLabel";
-            this.totalToolStripStatusLabel.Size = new System.Drawing.Size(98, 20);
-            this.totalToolStripStatusLabel.Text = "Всего туров: ";
+            totalToolStripStatusLabel.Name = "totalToolStripStatusLabel";
+            totalToolStripStatusLabel.Size = new Size(78, 17);
+            totalToolStripStatusLabel.Text = "Всего туров: ";
             // 
             // totalSumToolStripStatusLabel
             // 
-            this.totalSumToolStripStatusLabel.Name = "totalSumToolStripStatusLabel";
-            this.totalSumToolStripStatusLabel.Size = new System.Drawing.Size(112, 20);
-            this.totalSumToolStripStatusLabel.Text = "Общая сумма: ";
+            totalSumToolStripStatusLabel.Name = "totalSumToolStripStatusLabel";
+            totalSumToolStripStatusLabel.Size = new Size(91, 17);
+            totalSumToolStripStatusLabel.Text = "Общая сумма: ";
             // 
             // surchargeCountToolStripStatusLabel
             // 
-            this.surchargeCountToolStripStatusLabel.Name = "surchargeCountToolStripStatusLabel";
-            this.surchargeCountToolStripStatusLabel.Size = new System.Drawing.Size(144, 20);
-            this.surchargeCountToolStripStatusLabel.Text = "Туров с доплатами:";
+            surchargeCountToolStripStatusLabel.Name = "surchargeCountToolStripStatusLabel";
+            surchargeCountToolStripStatusLabel.Size = new Size(114, 17);
+            surchargeCountToolStripStatusLabel.Text = "Туров с доплатами:";
             // 
             // surchargeSumToolStripStatusLabel
             // 
-            this.surchargeSumToolStripStatusLabel.Name = "surchargeSumToolStripStatusLabel";
-            this.surchargeSumToolStripStatusLabel.Size = new System.Drawing.Size(114, 20);
-            this.surchargeSumToolStripStatusLabel.Text = "Сумма доплат: ";
+            surchargeSumToolStripStatusLabel.Name = "surchargeSumToolStripStatusLabel";
+            surchargeSumToolStripStatusLabel.Size = new Size(92, 17);
+            surchargeSumToolStripStatusLabel.Text = "Сумма доплат: ";
             // 
             // statusStrip1
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.totalToolStripStatusLabel,
-            this.totalSumToolStripStatusLabel,
-            this.surchargeCountToolStripStatusLabel,
-            this.surchargeSumToolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 829);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1582, 26);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { totalToolStripStatusLabel, totalSumToolStripStatusLabel, surchargeCountToolStripStatusLabel, surchargeSumToolStripStatusLabel });
+            statusStrip1.Location = new Point(0, 619);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Padding = new Padding(1, 0, 12, 0);
+            statusStrip1.Size = new Size(1384, 22);
+            statusStrip1.TabIndex = 1;
+            statusStrip1.Text = "statusStrip1";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.toursDataGridView);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1060, 799);
-            this.panel2.TabIndex = 6;
+            panel2.Controls.Add(toursDataGridView);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(927, 595);
+            panel2.TabIndex = 6;
             // 
             // toursDataGridView
             // 
-            this.toursDataGridView.AllowUserToAddRows = false;
-            this.toursDataGridView.AllowUserToDeleteRows = false;
-            this.toursDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.toursDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.toursDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DirectionColumn,
-            this.DateColumn,
-            this.AmountOfDaysColumn,
-            this.PriceForManColumn,
-            this.AmountOfManColumn,
-            this.WiFiColumn,
-            this.SurchargeColumn,
-            this.TotalColumn});
-            this.toursDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toursDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.toursDataGridView.Name = "toursDataGridView";
-            this.toursDataGridView.RowHeadersVisible = false;
-            this.toursDataGridView.RowHeadersWidth = 51;
-            this.toursDataGridView.RowTemplate.Height = 29;
-            this.toursDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.toursDataGridView.Size = new System.Drawing.Size(1060, 799);
-            this.toursDataGridView.TabIndex = 3;
-            this.toursDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            this.toursDataGridView.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            toursDataGridView.AllowUserToAddRows = false;
+            toursDataGridView.AllowUserToDeleteRows = false;
+            toursDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            toursDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            toursDataGridView.Columns.AddRange(new DataGridViewColumn[] { DirectionColumn, DateColumn, AmountOfDaysColumn, PriceForManColumn, AmountOfManColumn, WiFiColumn, SurchargeColumn, TotalColumn });
+            toursDataGridView.Dock = DockStyle.Fill;
+            toursDataGridView.Location = new Point(0, 0);
+            toursDataGridView.Margin = new Padding(3, 2, 3, 2);
+            toursDataGridView.Name = "toursDataGridView";
+            toursDataGridView.RowHeadersVisible = false;
+            toursDataGridView.RowHeadersWidth = 51;
+            toursDataGridView.RowTemplate.Height = 29;
+            toursDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            toursDataGridView.Size = new Size(927, 595);
+            toursDataGridView.TabIndex = 3;
+            toursDataGridView.CellFormatting += dataGridView1_CellFormatting;
+            toursDataGridView.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // DirectionColumn
             // 
-            this.DirectionColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DirectionColumn.DataPropertyName = "Direction";
-            this.DirectionColumn.HeaderText = "Направление";
-            this.DirectionColumn.MinimumWidth = 6;
-            this.DirectionColumn.Name = "DirectionColumn";
-            this.DirectionColumn.ReadOnly = true;
+            DirectionColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DirectionColumn.DataPropertyName = "Direction";
+            DirectionColumn.HeaderText = "Направление";
+            DirectionColumn.MinimumWidth = 6;
+            DirectionColumn.Name = "DirectionColumn";
+            DirectionColumn.ReadOnly = true;
             // 
             // DateColumn
             // 
-            this.DateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DateColumn.DataPropertyName = "Date";
-            this.DateColumn.HeaderText = "Дата вылета";
-            this.DateColumn.MinimumWidth = 6;
-            this.DateColumn.Name = "DateColumn";
-            this.DateColumn.ReadOnly = true;
+            DateColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DateColumn.DataPropertyName = "Date";
+            DateColumn.HeaderText = "Дата вылета";
+            DateColumn.MinimumWidth = 6;
+            DateColumn.Name = "DateColumn";
+            DateColumn.ReadOnly = true;
             // 
             // AmountOfDaysColumn
             // 
-            this.AmountOfDaysColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AmountOfDaysColumn.DataPropertyName = "AmountOfDays";
-            this.AmountOfDaysColumn.HeaderText = "Количество ночей";
-            this.AmountOfDaysColumn.MinimumWidth = 6;
-            this.AmountOfDaysColumn.Name = "AmountOfDaysColumn";
-            this.AmountOfDaysColumn.ReadOnly = true;
+            AmountOfDaysColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            AmountOfDaysColumn.DataPropertyName = "AmountOfDays";
+            AmountOfDaysColumn.HeaderText = "Количество ночей";
+            AmountOfDaysColumn.MinimumWidth = 6;
+            AmountOfDaysColumn.Name = "AmountOfDaysColumn";
+            AmountOfDaysColumn.ReadOnly = true;
             // 
             // PriceForManColumn
             // 
-            this.PriceForManColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PriceForManColumn.DataPropertyName = "PriceForMan";
-            this.PriceForManColumn.HeaderText = "Стоимость за отдыхающего (руб)";
-            this.PriceForManColumn.MinimumWidth = 6;
-            this.PriceForManColumn.Name = "PriceForManColumn";
-            this.PriceForManColumn.ReadOnly = true;
+            PriceForManColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PriceForManColumn.DataPropertyName = "PriceForMan";
+            PriceForManColumn.HeaderText = "Стоимость за отдыхающего (руб)";
+            PriceForManColumn.MinimumWidth = 6;
+            PriceForManColumn.Name = "PriceForManColumn";
+            PriceForManColumn.ReadOnly = true;
             // 
             // AmountOfManColumn
             // 
-            this.AmountOfManColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AmountOfManColumn.DataPropertyName = "AmountOfMan";
-            this.AmountOfManColumn.HeaderText = "Количество отдыхающих";
-            this.AmountOfManColumn.MinimumWidth = 6;
-            this.AmountOfManColumn.Name = "AmountOfManColumn";
-            this.AmountOfManColumn.ReadOnly = true;
+            AmountOfManColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            AmountOfManColumn.DataPropertyName = "AmountOfMan";
+            AmountOfManColumn.HeaderText = "Количество отдыхающих";
+            AmountOfManColumn.MinimumWidth = 6;
+            AmountOfManColumn.Name = "AmountOfManColumn";
+            AmountOfManColumn.ReadOnly = true;
             // 
             // WiFiColumn
             // 
-            this.WiFiColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WiFiColumn.DataPropertyName = "WiFi";
-            this.WiFiColumn.HeaderText = "Наличие Wi-Fi";
-            this.WiFiColumn.MinimumWidth = 6;
-            this.WiFiColumn.Name = "WiFiColumn";
-            this.WiFiColumn.ReadOnly = true;
+            WiFiColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            WiFiColumn.DataPropertyName = "WiFi";
+            WiFiColumn.HeaderText = "Наличие Wi-Fi";
+            WiFiColumn.MinimumWidth = 6;
+            WiFiColumn.Name = "WiFiColumn";
+            WiFiColumn.ReadOnly = true;
             // 
             // SurchargeColumn
             // 
-            this.SurchargeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SurchargeColumn.DataPropertyName = "Surcharge";
-            this.SurchargeColumn.HeaderText = "Доплаты (руб)";
-            this.SurchargeColumn.MinimumWidth = 6;
-            this.SurchargeColumn.Name = "SurchargeColumn";
-            this.SurchargeColumn.ReadOnly = true;
+            SurchargeColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SurchargeColumn.DataPropertyName = "Surcharge";
+            SurchargeColumn.HeaderText = "Доплаты (руб)";
+            SurchargeColumn.MinimumWidth = 6;
+            SurchargeColumn.Name = "SurchargeColumn";
+            SurchargeColumn.ReadOnly = true;
             // 
             // TotalColumn
             // 
-            this.TotalColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalColumn.DataPropertyName = "TotalPrice";
-            this.TotalColumn.HeaderText = "Общая стоимость";
-            this.TotalColumn.MinimumWidth = 6;
-            this.TotalColumn.Name = "TotalColumn";
-            this.TotalColumn.ReadOnly = true;
+            TotalColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TotalColumn.DataPropertyName = "TotalPrice";
+            TotalColumn.HeaderText = "Общая стоимость";
+            TotalColumn.MinimumWidth = 6;
+            TotalColumn.Name = "TotalColumn";
+            TotalColumn.ReadOnly = true;
+            // 
+            // сгенерировать100ToolStripMenuItem
+            // 
+            сгенерировать100ToolStripMenuItem.Name = "сгенерировать100ToolStripMenuItem";
+            сгенерировать100ToolStripMenuItem.Size = new Size(180, 22);
+            сгенерировать100ToolStripMenuItem.Text = "Сгенерировать 100";
+            сгенерировать100ToolStripMenuItem.Click += сгенерировать100ToolStripMenuItem_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1582, 855);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(1597, 891);
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Горячие туры | Главная";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.tourBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.groupBoxSort.ResumeLayout(false);
-            this.groupBoxSort.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toursDataGridView)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1384, 641);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(statusStrip1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(1399, 678);
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Горячие туры | Главная";
+            FormClosed += MainForm_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)tourBindingSource).EndInit();
+            panel1.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            panel3.ResumeLayout(false);
+            groupBoxSort.ResumeLayout(false);
+            groupBoxSort.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)toursDataGridView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -934,5 +890,6 @@
         private DataGridViewTextBoxColumn TotalColumn;
         private Panel panel3;
         private ToolStripMenuItem accountsToolStripMenuItem;
+        private ToolStripMenuItem сгенерировать100ToolStripMenuItem;
     }
 }

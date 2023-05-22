@@ -19,7 +19,7 @@ namespace HotTours
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=HotToursBase;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=HotToursLocalDB;Trusted_Connection=True;");
         }
     }
 }
